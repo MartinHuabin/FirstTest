@@ -1,0 +1,154 @@
+﻿<style>
+    /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+    #map {
+        height: 100%;
+    }
+    /* Optional: Makes the sample page fill the window. */
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+</style>
+<link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+<style>
+    .label {
+        text-align: right;
+        font-weight: bold;
+        width: 100px;
+        color: #303030;
+        font-family: "Roboto";
+    }
+
+    #address {
+        border: 1px solid #000090;
+        background-color: #f0f9ff;
+        width: 480px;
+        padding-right: 2px;
+    }
+
+        #address td {
+            font-size: 10pt;
+        }
+
+    .field {
+        width: 99%;
+    }
+
+    .slimField {
+        width: 80px;
+    }
+
+    .wideField {
+        width: 200px;
+    }
+
+    #locationField {
+        height: 20px;
+        margin-bottom: 2px;
+    }
+</style>
+
+
+
+<div ng-controller="HomeController" style="overflow:hidden;">
+    <div>
+        <h4 class="col-md-6" style="font-weight: bold;margin-left:6px;">Profile</h4>
+        <div class="col-md-5" style="margin-top:4px;">
+            <label style="width:160px;" for="userid">User id:</label>
+            <input type="text" placeholder="user id" name="user id" ng-model="customers.customerId" size="12" />
+        </div>
+
+        <br /><hr>
+    </div>
+
+    <div class="form-group">
+
+        <div class="row" style="margin-top:10px;">
+            <div class="col-md-6"><label style="width:180px;margin-left:6px;">First Name:</label> <input type="text" placeholder="First Name" name="userid" ng-model="customers.firstName" size="12" style="width:200px;" /></div>
+            <div class="col-md-6"><label style="width:180px;">Last Name:</label> <input type="text" placeholder="Last Name" name="userid" ng-model="customers.lastName" size="12" style="width:200px;" /></div>
+        </div>
+        <div class="row" style="margin-top:10px;">
+            <div class="col-md-6"><label style="width:180px;margin-left:6px;">Tel:</label> <input type="text" placeholder="Tel" name="userid" ng-model="customers.telephone" size="12" style="width:200px;" /></div>
+            <div class="col-md-6"><label style="width:180px;">Email:</label> <input type="text" placeholder="Email" name="userid" ng-model="customers.email" size="12" style="width:200px;" /></div>
+        </div>
+
+        <div class="row" style="margin-top:10px;">
+            <div class="col-md-6"><label style="width:180px;margin-left:6px;">Password:</label> <input type="password" placeholder="Password" name="userid" ng-model="customers.password" size="12" style="width:200px;" /></div>
+            <div class="col-md-6"><label style="width:180px;">Password Confirm:</label> <input type="password" placeholder="Password" name="userid" ng-model="customers.confirmPassword" size="12" style="width:200px;" /></div>
+        </div>
+
+        <br /><br />
+
+        <div style="display:inline-block;">
+            <div style="border:solid; border-color:lightgray; border-width: 1px;margin-top:10px;width:500px;display: inline-block;margin-left:2px;">
+                <h4 ng-show="false" ng-model="customers.addID_FK" style="font-weight: bold;margin-left:6px">Mailing Address</h4>
+
+                <div>
+                    <input id="autocomplete"
+                           placeholder="Enter your address"
+                           onFocus="geolocate()"
+                           type="text" style="width:98%;margin-left:6px;" />
+                </div>
+
+                <ul>
+
+                    <li style="margin-top:10px;">
+                        <label style="width:180px;margin-left:6px;">Street #:</label>
+
+                        <input id="street_number"
+                               type="text" class="field" ng-model="Addresses.Address1" size="12" style="width:300px;" />
+
+                    </li>
+
+                    <li style="margin-top:10px;">
+                        <label style="width:180px;margin-left:6px;">Street Name:</label>
+                        <input type="text" class="field" id="route" ng-model="Addresses.Address2" size="12" style="width:300px;" />
+
+                    </li>
+
+
+                    <li style="margin-top:10px;">
+                        <label style="width:180px;margin-left:6px;">City:</label>
+                        <input name="country" style="width:300px;" class="field" ng-model="Addresses.City" id="locality" />
+
+                    </li>
+                    <li style="margin-top:10px;">
+                        <label style="width:180px;margin-left:6px;">Post Code:</label>
+                        <input type="text" class="field" id="postal_code" ng-model="Addresses.PostalCode" size="12" style="width:300px;" />
+                    </li>
+                    <li style="margin-top:10px;">
+                        <label style="width:180px;margin-left:6px;">Province:</label>
+
+                        <input name="country" style="width:300px;" class="field" id="administrative_area_level_1" ng-model="Addresses.State" />
+
+                    </li>
+
+                    <li style="margin-top:10px;">
+                        <label style="width:180px;margin-left:6px;">Country:</label>
+
+                        <input name="country" style="width:300px;" class="field" id="country" ng-model="Addresses.Country" />
+
+                    </li>
+
+                </ul>
+
+                <br />
+            </div>
+
+            <div style="margin-bottom:4px;display: inline-block;">
+                <label style="width:160px;" for="userid"></label>
+                <button type="button" class="btn btn-primary" ng-click="SaveCustomer()">Save</button>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <script src="../Scripts/GoogMapApps.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNAZFEwHDXpvlO-uMei88-WZZC9mpksSk&amp;libraries=places&amp;callback=initAutocomplete" async="" defer=""></script>
+
+</div>

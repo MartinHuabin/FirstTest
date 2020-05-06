@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Canada2DCodeModelStoreContainer" CdmEntityContainer="Canada2DCodeEntities">
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="Canada2DCodeModel.Customers">
+        <MappingFragment StoreEntitySet="Customers">
+          <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+          <ScalarProperty Name="AddID_FK" ColumnName="AddID_FK" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="PasswordKey" ColumnName="PasswordKey" />
+          <ScalarProperty Name="Conditions_BT" ColumnName="Conditions_BT" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Contacts">
+      <EntityTypeMapping TypeName="Canada2DCodeModel.Contacts">
+        <MappingFragment StoreEntitySet="Contacts">
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+          <ScalarProperty Name="ContactNo2" ColumnName="ContactNo2" />
+          <ScalarProperty Name="ContactNo1" ColumnName="ContactNo1" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="ContactID" ColumnName="ContactID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Country">
+      <EntityTypeMapping TypeName="Canada2DCodeModel.Country">
+        <MappingFragment StoreEntitySet="Country">
+          <ScalarProperty Name="CountryNameCN" ColumnName="CountryNameCN" />
+          <ScalarProperty Name="CountryCode3D" ColumnName="CountryCode3D" />
+          <ScalarProperty Name="CountryCode2D" ColumnName="CountryCode2D" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="Canada2DCodeModel.Employees">
+        <MappingFragment StoreEntitySet="Employees">
+          <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="HireDate" ColumnName="HireDate" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Orders">
+      <EntityTypeMapping TypeName="Canada2DCodeModel.Orders">
+        <MappingFragment StoreEntitySet="Orders">
+          <ScalarProperty Name="ShipPostalCode" ColumnName="ShipPostalCode" />
+          <ScalarProperty Name="ShipAddress" ColumnName="ShipAddress" />
+          <ScalarProperty Name="ShipName" ColumnName="ShipName" />
+          <ScalarProperty Name="ShippedDate" ColumnName="ShippedDate" />
+          <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="State">
+      <EntityTypeMapping TypeName="Canada2DCodeModel.State">
+        <MappingFragment StoreEntitySet="State">
+          <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+          <ScalarProperty Name="StateName" ColumnName="StateName" />
+          <ScalarProperty Name="StateID" ColumnName="StateID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="Canada2DCodeModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="definition" ColumnName="definition" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UploadedFiles">
+      <EntityTypeMapping TypeName="Canada2DCodeModel.UploadedFiles">
+        <MappingFragment StoreEntitySet="UploadedFiles">
+          <ScalarProperty Name="FileSize" ColumnName="FileSize" />
+          <ScalarProperty Name="FilePath" ColumnName="FilePath" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="FileID" ColumnName="FileID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="Canada2DCodeModel.Users">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="ExpiredDate_DT" ColumnName="ExpiredDate_DT" />
+          <ScalarProperty Name="DeleteBy_NV" ColumnName="DeleteBy_NV" />
+          <ScalarProperty Name="DeleteDate_DT" ColumnName="DeleteDate_DT" />
+          <ScalarProperty Name="CreatedBy_NV" ColumnName="CreatedBy_NV" />
+          <ScalarProperty Name="CreateDate_DT" ColumnName="CreateDate_DT" />
+          <ScalarProperty Name="OrganizationID_FK" ColumnName="OrganizationID_FK" />
+          <ScalarProperty Name="UserIsComfirmed" ColumnName="UserIsComfirmed" />
+          <ScalarProperty Name="FullName_CN" ColumnName="FullName_CN" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Addresses">
+      <EntityTypeMapping TypeName="Canada2DCodeModel.Addresses">
+        <MappingFragment StoreEntitySet="Addresses">
+          <ScalarProperty Name="OrganizationID_FK" ColumnName="OrganizationID_FK" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="IsInActive" ColumnName="IsInActive" />
+          <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Address3" ColumnName="Address3" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="Address1" ColumnName="Address1" />
+          <ScalarProperty Name="AddID_PK" ColumnName="AddID_PK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CustomerEmail">
+      <EntityTypeMapping TypeName="Canada2DCodeModel.CustomerEmail">
+        <MappingFragment StoreEntitySet="CustomerEmail">
+          <ScalarProperty Name="QueueCode" ColumnName="QueueCode" />
+          <ScalarProperty Name="IsinActive" ColumnName="IsinActive" />
+          <ScalarProperty Name="CustomeID" ColumnName="CustomeID" />
+          <ScalarProperty Name="CustomerEmail1" ColumnName="CustomerEmail" />
+          <ScalarProperty Name="CustomerEmailID" ColumnName="CustomerEmailID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CustomerPhone">
+      <EntityTypeMapping TypeName="Canada2DCodeModel.CustomerPhone">
+        <MappingFragment StoreEntitySet="CustomerPhone">
+          <ScalarProperty Name="QueueCode" ColumnName="QueueCode" />
+          <ScalarProperty Name="IsinActive" ColumnName="IsinActive" />
+          <ScalarProperty Name="CustomeID" ColumnName="CustomeID" />
+          <ScalarProperty Name="CustomerPhone1" ColumnName="CustomerPhone" />
+          <ScalarProperty Name="CustomerPhoneID" ColumnName="CustomerPhoneID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Object2DCode">
+      <EntityTypeMapping TypeName="Canada2DCodeModel.Object2DCode">
+        <MappingFragment StoreEntitySet="Object2DCode">
+          <ScalarProperty Name="BlockID_FK" ColumnName="BlockID_FK" />
+          <ScalarProperty Name="IsInActive" ColumnName="IsInActive" />
+          <ScalarProperty Name="C2DCodeContents" ColumnName="C2DCodeContents" />
+          <ScalarProperty Name="C2DCodeType" ColumnName="C2DCodeType" />
+          <ScalarProperty Name="C2DCodeID" ColumnName="C2DCodeID" />
+          <ScalarProperty Name="Object_id_FK" ColumnName="Object_id_FK" />
+          <ScalarProperty Name="Objec2DCodeIDPK" ColumnName="Objec2DCodeIDPK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Organization">
+      <EntityTypeMapping TypeName="Canada2DCodeModel.Organization">
+        <MappingFragment StoreEntitySet="Organization">
+          <ScalarProperty Name="DeletedBy_NV" ColumnName="DeletedBy_NV" />
+          <ScalarProperty Name="DeleteDate_DT" ColumnName="DeleteDate_DT" />
+          <ScalarProperty Name="CreatedBy_NV" ColumnName="CreatedBy_NV" />
+          <ScalarProperty Name="CreateDate_DT" ColumnName="CreateDate_DT" />
+          <ScalarProperty Name="AdminCode" ColumnName="AdminCode" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="UserOrganizationID" ColumnName="UserOrganizationID" />
+          <ScalarProperty Name="OrganizationAddCode" ColumnName="OrganizationAddCode" />
+          <ScalarProperty Name="OrganizationName" ColumnName="OrganizationName" />
+          <ScalarProperty Name="OrganizationID_PK" ColumnName="OrganizationID_PK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Production_Categories">
+      <EntityTypeMapping TypeName="Canada2DCodeModel.Production_Categories">
+        <MappingFragment StoreEntitySet="Production_Categories">
+          <ScalarProperty Name="IsInActive" ColumnName="IsInActive" />
+          <ScalarProperty Name="AdminLevel" ColumnName="AdminLevel" />
+          <ScalarProperty Name="Category_name" ColumnName="Category_name" />
+          <ScalarProperty Name="Category_id" ColumnName="Category_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="Canada2DCodeModel.Roles">
+        <MappingFragment StoreEntitySet="Roles">
+          <ScalarProperty Name="IsInactive" ColumnName="IsInactive" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+          <ScalarProperty Name="RoleID_PK" ColumnName="RoleID_PK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User_Roles">
+      <EntityTypeMapping TypeName="Canada2DCodeModel.User_Roles">
+        <MappingFragment StoreEntitySet="User_Roles">
+          <ScalarProperty Name="DeleteBy_NV" ColumnName="DeleteBy_NV" />
+          <ScalarProperty Name="Delete_DT" ColumnName="Delete_DT" />
+          <ScalarProperty Name="CreatedBy_NV" ColumnName="CreatedBy_NV" />
+          <ScalarProperty Name="Created_DT" ColumnName="Created_DT" />
+          <ScalarProperty Name="RoleID_FK" ColumnName="RoleID_FK" />
+          <ScalarProperty Name="UserID_FK" ColumnName="UserID_FK" />
+          <ScalarProperty Name="UserRoleID_PK" ColumnName="UserRoleID_PK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ObjectEvent">
+      <EntityTypeMapping TypeName="Canada2DCodeModel.ObjectEvent">
+        <MappingFragment StoreEntitySet="ObjectEvent">
+          <ScalarProperty Name="ObjectID_FK" ColumnName="ObjectID_FK" />
+          <ScalarProperty Name="EventID_PK" ColumnName="EventID_PK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ObjectPerson">
+      <EntityTypeMapping TypeName="Canada2DCodeModel.ObjectPerson">
+        <MappingFragment StoreEntitySet="ObjectPerson">
+          <ScalarProperty Name="PersonDetailsUrl" ColumnName="PersonDetailsUrl" />
+          <ScalarProperty Name="Deleted_Date" ColumnName="Deleted_Date" />
+          <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+          <ScalarProperty Name="C2DCodeType" ColumnName="C2DCodeType" />
+          <ScalarProperty Name="AddID_FK" ColumnName="AddID_FK" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Position" ColumnName="Position" />
+          <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+          <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="PersonType" ColumnName="PersonType" />
+          <ScalarProperty Name="Person_Name" ColumnName="Person_Name" />
+          <ScalarProperty Name="ObjectID_FK" ColumnName="ObjectID_FK" />
+          <ScalarProperty Name="PersonID_PK" ColumnName="PersonID_PK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ObjectProduction">
+      <EntityTypeMapping TypeName="Canada2DCodeModel.ObjectProduction">
+        <MappingFragment StoreEntitySet="ObjectProduction">
+          <ScalarProperty Name="DeleteByName_NV" ColumnName="DeleteByName_NV" />
+          <ScalarProperty Name="DeleteDate_DT" ColumnName="DeleteDate_DT" />
+          <ScalarProperty Name="CreatedBy_NV" ColumnName="CreatedBy_NV" />
+          <ScalarProperty Name="CreatedDate_DT" ColumnName="CreatedDate_DT" />
+          <ScalarProperty Name="NextChainID" ColumnName="NextChainID" />
+          <ScalarProperty Name="BlockID" ColumnName="BlockID" />
+          <ScalarProperty Name="OpenToRole" ColumnName="OpenToRole" />
+          <ScalarProperty Name="PrivateKey" ColumnName="PrivateKey" />
+          <ScalarProperty Name="ContentsURL" ColumnName="ContentsURL" />
+          <ScalarProperty Name="QRCode" ColumnName="QRCode" />
+          <ScalarProperty Name="C2DMACode" ColumnName="C2DMACode" />
+          <ScalarProperty Name="OrganizationID_FK" ColumnName="OrganizationID_FK" />
+          <ScalarProperty Name="Shipped_Date" ColumnName="Shipped_Date" />
+          <ScalarProperty Name="Shipped_To" ColumnName="Shipped_To" />
+          <ScalarProperty Name="Shipped_From" ColumnName="Shipped_From" />
+          <ScalarProperty Name="Manufacture_Date" ColumnName="Manufacture_Date" />
+          <ScalarProperty Name="Manufacturer_vendor" ColumnName="Manufacturer_vendor" />
+          <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+          <ScalarProperty Name="ItemUnit" ColumnName="ItemUnit" />
+          <ScalarProperty Name="List_price" ColumnName="List_price" />
+          <ScalarProperty Name="Model_year" ColumnName="Model_year" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="Category_id" ColumnName="Category_id" />
+          <ScalarProperty Name="Brand_id" ColumnName="Brand_id" />
+          <ScalarProperty Name="Product_name" ColumnName="Product_name" />
+          <ScalarProperty Name="ObjectID_FK" ColumnName="ObjectID_FK" />
+          <ScalarProperty Name="Product_id" ColumnName="Product_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ObjectTbl">
+      <EntityTypeMapping TypeName="Canada2DCodeModel.ObjectTbl">
+        <MappingFragment StoreEntitySet="ObjectTbl">
+          <ScalarProperty Name="DeleteByName_NV" ColumnName="DeleteByName_NV" />
+          <ScalarProperty Name="DeleteDate_DT" ColumnName="DeleteDate_DT" />
+          <ScalarProperty Name="CreatedBy_NV" ColumnName="CreatedBy_NV" />
+          <ScalarProperty Name="CreatedDate_DT" ColumnName="CreatedDate_DT" />
+          <ScalarProperty Name="NextChainID" ColumnName="NextChainID" />
+          <ScalarProperty Name="BlockID" ColumnName="BlockID" />
+          <ScalarProperty Name="OpenToRole" ColumnName="OpenToRole" />
+          <ScalarProperty Name="PrivateKey" ColumnName="PrivateKey" />
+          <ScalarProperty Name="ContentsURL" ColumnName="ContentsURL" />
+          <ScalarProperty Name="QRCode" ColumnName="QRCode" />
+          <ScalarProperty Name="C2DMACode" ColumnName="C2DMACode" />
+          <ScalarProperty Name="OrganizationID_FK" ColumnName="OrganizationID_FK" />
+          <ScalarProperty Name="Model_year" ColumnName="Model_year" />
+          <ScalarProperty Name="Category_id" ColumnName="Category_id" />
+          <ScalarProperty Name="Object_name" ColumnName="Object_name" />
+          <ScalarProperty Name="Object_id" ColumnName="Object_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

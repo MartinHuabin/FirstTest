@@ -1,0 +1,328 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Canada2DCodeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Customers">
+    <Key>
+      <PropertyRef Name="CustomerId" />
+    </Key>
+    <Property Name="CustomerId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="PasswordKey" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Conditions_BT" Type="Boolean" />
+    <Property Name="Url" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="AddID_FK" Type="Int32" />
+    <Property Name="Telephone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Addresses" Relationship="Canada2DCodeModel.FK_Customers_Address" FromRole="Customers" ToRole="Addresses" />
+  </EntityType>
+  <EntityContainer Name="Canada2DCodeEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Customers" EntityType="Self.Customers" />
+    <EntitySet Name="Contacts" EntityType="Canada2DCodeModel.Contacts" />
+    <EntitySet Name="Country" EntityType="Canada2DCodeModel.Country" />
+    <EntitySet Name="Employees" EntityType="Canada2DCodeModel.Employees" />
+    <EntitySet Name="Orders" EntityType="Canada2DCodeModel.Orders" />
+    <EntitySet Name="State" EntityType="Canada2DCodeModel.State" />
+    <EntitySet Name="sysdiagrams" EntityType="Canada2DCodeModel.sysdiagrams" />
+    <EntitySet Name="UploadedFiles" EntityType="Canada2DCodeModel.UploadedFiles" />
+    <EntitySet Name="Users" EntityType="Canada2DCodeModel.Users" />
+    <EntitySet Name="Addresses" EntityType="Canada2DCodeModel.Addresses" />
+    <EntitySet Name="CustomerEmail" EntityType="Canada2DCodeModel.CustomerEmail" />
+    <EntitySet Name="CustomerPhone" EntityType="Canada2DCodeModel.CustomerPhone" />
+    <EntitySet Name="Object2DCode" EntityType="Canada2DCodeModel.Object2DCode" />
+    <EntitySet Name="Organization" EntityType="Canada2DCodeModel.Organization" />
+    <EntitySet Name="Production_Categories" EntityType="Canada2DCodeModel.Production_Categories" />
+    <EntitySet Name="Roles" EntityType="Canada2DCodeModel.Roles" />
+    <EntitySet Name="User_Roles" EntityType="Canada2DCodeModel.User_Roles" />
+    <AssociationSet Name="FK_Customers_Address" Association="Canada2DCodeModel.FK_Customers_Address">
+      <End Role="Addresses" EntitySet="Addresses" />
+      <End Role="Customers" EntitySet="Customers" />
+    </AssociationSet>
+    <EntitySet Name="ObjectEvent" EntityType="Canada2DCodeModel.ObjectEvent" />
+    <EntitySet Name="ObjectPerson" EntityType="Canada2DCodeModel.ObjectPerson" />
+    <EntitySet Name="ObjectProduction" EntityType="Canada2DCodeModel.ObjectProduction" />
+    <EntitySet Name="ObjectTbl" EntityType="Canada2DCodeModel.ObjectTbl" />
+  </EntityContainer>
+  <EntityType Name="Contacts">
+    <Key>
+      <PropertyRef Name="ContactID" />
+    </Key>
+    <Property Name="ContactID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="LastName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ContactNo1" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ContactNo2" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="EmailID" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Country">
+    <Key>
+      <PropertyRef Name="CountryID" />
+    </Key>
+    <Property Name="CountryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CountryName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CountryCode2D" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="CountryCode3D" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="CountryNameCN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Employees">
+    <Key>
+      <PropertyRef Name="EmployeeID" />
+    </Key>
+    <Property Name="EmployeeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LastName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="HireDate" Type="DateTime" Precision="3" />
+    <Property Name="Address" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="City" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="PostalCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Orders">
+    <Key>
+      <PropertyRef Name="OrderID" />
+    </Key>
+    <Property Name="OrderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CustomerID" Type="Int32" Nullable="false" />
+    <Property Name="OrderDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ShippedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ShipName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ShipAddress" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="ShipPostalCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="State">
+    <Key>
+      <PropertyRef Name="StateID" />
+    </Key>
+    <Property Name="StateID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StateName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CountryID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="UploadedFiles">
+    <Key>
+      <PropertyRef Name="FileID" />
+    </Key>
+    <Property Name="FileID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FileName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="FilePath" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="FileSize" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Username" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="EmailID" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Gender" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="PasswordHash" Type="Binary" Nullable="false" MaxLength="128" FixedLength="true" />
+    <Property Name="FirstName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="FullName_CN" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="UserIsComfirmed" Type="Boolean" />
+    <Property Name="OrganizationID_FK" Type="Int32" />
+    <Property Name="CreateDate_DT" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy_NV" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="DeleteDate_DT" Type="DateTime" Precision="3" />
+    <Property Name="DeleteBy_NV" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="ExpiredDate_DT" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Addresses">
+    <Key>
+      <PropertyRef Name="AddID_PK" />
+    </Key>
+    <Property Name="AddID_PK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Address1" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Address2" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Address3" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="City" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="State" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Country" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="PostalCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsInActive" Type="Boolean" />
+    <Property Name="Note" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="OrganizationID_FK" Type="Int32" />
+    <NavigationProperty Name="Customers" Relationship="Canada2DCodeModel.FK_Customers_Address" FromRole="Addresses" ToRole="Customers" />
+  </EntityType>
+  <EntityType Name="CustomerEmail">
+    <Key>
+      <PropertyRef Name="CustomerEmailID" />
+    </Key>
+    <Property Name="CustomerEmailID" Type="Int32" Nullable="false" />
+    <Property Name="CustomerEmail1" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="CustomeID" Type="Int32" />
+    <Property Name="IsinActive" Type="Boolean" />
+    <Property Name="QueueCode" Type="Int32" />
+  </EntityType>
+  <EntityType Name="CustomerPhone">
+    <Key>
+      <PropertyRef Name="CustomerPhoneID" />
+    </Key>
+    <Property Name="CustomerPhoneID" Type="Int32" Nullable="false" />
+    <Property Name="CustomerPhone1" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="CustomeID" Type="Int32" />
+    <Property Name="IsinActive" Type="Boolean" />
+    <Property Name="QueueCode" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Object2DCode">
+    <Key>
+      <PropertyRef Name="Objec2DCodeIDPK" />
+    </Key>
+    <Property Name="Objec2DCodeIDPK" Type="Int32" Nullable="false" />
+    <Property Name="Object_id_FK" Type="Int32" />
+    <Property Name="C2DCodeID" Type="Int32" />
+    <Property Name="C2DCodeType" Type="Int32" />
+    <Property Name="C2DCodeContents" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="IsInActive" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="BlockID_FK" Type="Guid" />
+  </EntityType>
+  <EntityType Name="Organization">
+    <Key>
+      <PropertyRef Name="OrganizationID_PK" />
+    </Key>
+    <Property Name="OrganizationID_PK" Type="Int32" Nullable="false" />
+    <Property Name="OrganizationName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="OrganizationAddCode" Type="Int32" />
+    <Property Name="UserOrganizationID" Type="Int32" />
+    <Property Name="Note" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AdminCode" Type="Int32" />
+    <Property Name="CreateDate_DT" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy_NV" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="DeleteDate_DT" Type="DateTime" Precision="3" />
+    <Property Name="DeletedBy_NV" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Production_Categories">
+    <Key>
+      <PropertyRef Name="Category_id" />
+    </Key>
+    <Property Name="Category_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Category_name" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AdminLevel" Type="Int32" />
+    <Property Name="IsInActive" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Roles">
+    <Key>
+      <PropertyRef Name="RoleID_PK" />
+    </Key>
+    <Property Name="RoleID_PK" Type="Int32" Nullable="false" />
+    <Property Name="RoleName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Comment" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="IsInactive" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="User_Roles">
+    <Key>
+      <PropertyRef Name="UserRoleID_PK" />
+    </Key>
+    <Property Name="UserRoleID_PK" Type="Int32" Nullable="false" />
+    <Property Name="UserID_FK" Type="Int32" Nullable="false" />
+    <Property Name="RoleID_FK" Type="Int32" Nullable="false" />
+    <Property Name="Created_DT" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy_NV" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Delete_DT" Type="DateTime" Precision="3" />
+    <Property Name="DeleteBy_NV" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK_Customers_Address">
+    <End Type="Canada2DCodeModel.Addresses" Role="Addresses" Multiplicity="0..1" />
+    <End Type="Canada2DCodeModel.Customers" Role="Customers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Addresses">
+        <PropertyRef Name="AddID_PK" />
+      </Principal>
+      <Dependent Role="Customers">
+        <PropertyRef Name="AddID_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="ObjectEvent">
+    <Key>
+      <PropertyRef Name="EventID_PK" />
+    </Key>
+    <Property Name="EventID_PK" Type="Int32" Nullable="false" />
+    <Property Name="ObjectID_FK" Type="Int32" />
+  </EntityType>
+  <EntityType Name="ObjectPerson">
+    <Key>
+      <PropertyRef Name="PersonID_PK" />
+    </Key>
+    <Property Name="PersonID_PK" Type="Int32" Nullable="false" />
+    <Property Name="ObjectID_FK" Type="Int32" />
+    <Property Name="Person_Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="PersonType" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Gender" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Title" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Telephone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Birthday" Type="DateTime" Precision="3" />
+    <Property Name="Position" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="AddID_FK" Type="Int32" />
+    <Property Name="C2DCodeType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Created_Date" Type="DateTime" Precision="3" />
+    <Property Name="Deleted_Date" Type="DateTime" Precision="3" />
+    <Property Name="PersonDetailsUrl" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ObjectProduction">
+    <Key>
+      <PropertyRef Name="Product_id" />
+    </Key>
+    <Property Name="Product_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ObjectID_FK" Type="Int32" Nullable="false" />
+    <Property Name="Product_name" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Brand_id" Type="Int32" Nullable="false" />
+    <Property Name="Category_id" Type="Int32" Nullable="false" />
+    <Property Name="Model" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Model_year" Type="Int16" Nullable="false" />
+    <Property Name="List_price" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="ItemUnit" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LocationID" Type="Int32" />
+    <Property Name="Manufacturer_vendor" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Manufacture_Date" Type="DateTime" Precision="3" />
+    <Property Name="Shipped_From" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Shipped_To" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Shipped_Date" Type="DateTime" Precision="3" />
+    <Property Name="OrganizationID_FK" Type="Int32" />
+    <Property Name="C2DMACode" Type="String" MaxLength="1024" FixedLength="false" Unicode="true" />
+    <Property Name="QRCode" Type="Binary" MaxLength="5000" FixedLength="true" />
+    <Property Name="ContentsURL" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="PrivateKey" Type="Binary" MaxLength="500" FixedLength="true" />
+    <Property Name="OpenToRole" Type="Int32" />
+    <Property Name="BlockID" Type="Guid" />
+    <Property Name="NextChainID" Type="Guid" />
+    <Property Name="CreatedDate_DT" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy_NV" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="DeleteDate_DT" Type="DateTime" Precision="3" />
+    <Property Name="DeleteByName_NV" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ObjectTbl">
+    <Key>
+      <PropertyRef Name="Object_id" />
+    </Key>
+    <Property Name="Object_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Object_name" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Category_id" Type="Int32" Nullable="false" />
+    <Property Name="Model_year" Type="Int16" Nullable="false" />
+    <Property Name="OrganizationID_FK" Type="Int32" />
+    <Property Name="C2DMACode" Type="String" MaxLength="1024" FixedLength="false" Unicode="true" />
+    <Property Name="QRCode" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="ContentsURL" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="PrivateKey" Type="Binary" MaxLength="500" FixedLength="true" />
+    <Property Name="OpenToRole" Type="Int32" />
+    <Property Name="BlockID" Type="Guid" />
+    <Property Name="NextChainID" Type="Guid" />
+    <Property Name="CreatedDate_DT" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy_NV" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="DeleteDate_DT" Type="DateTime" Precision="3" />
+    <Property Name="DeleteByName_NV" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

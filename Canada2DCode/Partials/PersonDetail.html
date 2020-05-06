@@ -1,0 +1,119 @@
+﻿<div ng-controller="PersonDetailController" style="overflow:hidden;padding-top:80px;" class="container body-content">
+    <div>
+        <h4 class="col-md-6" style="font-weight: bold;margin-left:6px;">Create 2D Code - Person</h4>
+
+        <br /><hr>
+    </div>
+
+    <div class="form-group">
+
+        <div class="row" style="margin-top:10px;">
+            <div class="col-md-6"><label style="width:180px;margin-left:6px;">ID:</label> <input type="text" placeholder="ID" ng-model="ObjectPersonModel.Object_id" name="ID" size="12" style="width:200px;" disabled /></div>
+            <div class="col-md-6"><label style="width:180px;">Sub ID:</label> <input type="text" placeholder="Sub ID" ng-model="ObjectPersonModel.ObjectPersonData.PersonID_PK" name="Sub ID" size="12" style="width:200px;" disabled /></div>
+        </div>
+
+        <div class="row" style="margin-top:10px;">
+            <div class="col-md-6">
+                <label style="width:180px;margin-left:6px;">Category:</label>
+
+
+                <select style="width:230px;" data-ng-options="Category.Category_id as Category.Category_Name for Category in ObjectCategoryList" data-ng-model="ObjectPersonModel.Category_id" disabled></select>
+
+
+            </div>
+            <div class="col-md-6">
+                <label style="width:180px;">Obj Type:</label>
+
+                <select style="width:230px;" data-ng-options="ObjectType.ObjectType_id as ObjectType.ObjectType_Name for ObjectType in ObjectTypeList" ng-model="ObjectPersonModel.ObjectPersonData.PersonType" disabled></select>
+
+            </div>
+        </div>
+
+
+        <div class="row" style="margin-top:10px;">
+            <div class="col-md-6"><label style="width:180px;margin-left:6px;">Obj Name:</label> <input type="text" placeholder="Obj Name" name="Obj Name" size="12" style="width:200px;" ng-model="ObjectPersonModel.ObjectPersonData.Person_Name" disabled /></div>
+            <div class="col-md-6"><label style="width:180px;">Desc:</label> <input type="text" placeholder="Desc" name="Desc" size="12" style="width:200px;" ng-model="ObjectPersonModel.ObjectPersonData.Description" disabled /></div>
+        </div>
+
+
+        <div class="row" style="margin-top:10px;">
+            <div class="col-md-10"><label style="width:180px;margin-left:6px;">Object:</label> <input type="text" placeholder="Object_name" name="Object_name" size="12" style="width:500px;" ng-model="ObjectPersonModel.Object_name" disabled /></div>
+
+        </div>
+
+       
+        <div class="row" style="margin-top:10px;">
+            <div class="col-md-6">
+                <label style="width:180px;margin-left:6px;">Gender:</label>
+
+                <select style="width:230px;" data-ng-options="Gender.Gender_id as Gender.Gender_Name for Gender in GenderList" ng-model="ObjectPersonModel.ObjectPersonData.Gender" disabled></select>
+
+
+            </div>
+            <div class="col-md-6">
+
+                <label for="birthdaytime" style="width:180px;margin-left:0px;">Birthday :</label>
+
+                <input type="text" date='dd-MM-yyyy' id="birthdaytime" name="birthdaytime" style="width:230px;" datePicker ng-model="ObjectPersonModel.ObjectPersonData.Birthday" uib-datepicker-popup="yyyy/mm/dd" disabled />
+    
+
+            </div>
+
+        </div>
+
+
+        <div class="row" style="margin-top:10px;">
+            <div class="col-md-6"><label style="width:180px;margin-left:6px;">Title:</label> <input type="text" placeholder="Title" name="Obj Name" size="12" style="width:200px;" ng-model="ObjectPersonModel.ObjectPersonData.Title" disabled /></div>
+            <div class="col-md-6"><label style="width:180px;">Position:</label> <input type="text" placeholder="Position" name="Desc" size="12" style="width:200px;" ng-model="ObjectPersonModel.ObjectPersonData.Position" disabled /></div>
+        </div>
+
+
+        <div class="row" style="margin-top:10px;">
+            <div class="col-md-6"><label style="width:180px;margin-left:6px;">Tel:</label> <input type="text" placeholder="Tel" name="Tel" size="12" style="width:200px;" ng-model="ObjectPersonModel.ObjectPersonData.Telephone" disabled /></div>
+            <div class="col-md-6"><label style="width:180px;">Email:</label> <input type="text" placeholder="Email" name="Email" size="12" style="width:200px;" ng-model="ObjectPersonModel.ObjectPersonData.Email" disabled /></div>
+        </div>
+
+        <!---->
+
+        <div class="row" style="margin-top:10px;">
+            <div class="col-md-10">
+                <label style="width:180px;margin-left:6px;">2D Code Type:</label>
+                <select style="width:260px;" data-ng-options="C2DCodeType.C2DCodeType_id as C2DCodeType.C2DCodeType_Name for C2DCodeType in C2DCodeTypeList" ng-change="getC2DCodeTypeData(ObjectPersonModel.ObjectPersonData.C2DCodeType)" ng-model="ObjectPersonModel.ObjectPersonData.C2DCodeType" disabled></select>
+
+            </div>
+
+        </div>
+
+        <br /><br />
+
+        <div style="display:inline-block;margin-left:60px;">
+            <div style="border:solid; border-color:lightgray; border-width: 1px;margin-top:10px;width:140px;display: inline-block;margin-left:2px;">
+                <h4 style="font-weight: bold;margin-left:6px">Canada 2D Code</h4>
+
+                <img data-ng-src="data:image/png;base64,{{ObjectPersonModel.QRCode}}" style="width:130px;height:130px;" />
+                
+                <br />
+            </div>
+            <br />
+      
+        </div>
+    </div>
+</div>
+
+<script>
+        $(function () {
+            $('body').on('click', '.CX span', function () {
+                //When Click On + sign
+                if ($(this).text() == '+') {
+                    $(this).text('-');
+                }
+                else {
+                    $(this).text('+');
+                }
+                $(this).closest('tr') // row of + sign
+                    .next('tr') // next row of + sign
+                    .toggle(); // if show then hide else show
+
+            });
+        });
+</script>

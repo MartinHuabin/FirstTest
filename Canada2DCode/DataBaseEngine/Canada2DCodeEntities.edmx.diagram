@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="6cc35231ab694db1beb6b4e99c1fb4f5" Name="Diagram1" ZoomLevel="99">
+        <EntityTypeShape EntityType="Canada2DCodeModel.Customers" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Canada2DCodeModel.Contacts" Width="1.5" PointX="3.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Canada2DCodeModel.Country" Width="1.5" PointX="0.75" PointY="4.75" />
+        <EntityTypeShape EntityType="Canada2DCodeModel.Employees" Width="1.5" PointX="2.75" PointY="4.75" />
+        <EntityTypeShape EntityType="Canada2DCodeModel.Orders" Width="1.5" PointX="4.75" PointY="4.75" />
+        <EntityTypeShape EntityType="Canada2DCodeModel.State" Width="1.5" PointX="5.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Canada2DCodeModel.sysdiagrams" Width="1.5" PointX="6.75" PointY="3.75" />
+        <EntityTypeShape EntityType="Canada2DCodeModel.UploadedFiles" Width="1.5" PointX="6.75" PointY="6.75" />
+        <EntityTypeShape EntityType="Canada2DCodeModel.Users" Width="1.5" PointX="8.875" PointY="0.625" />
+        <EntityTypeShape EntityType="Canada2DCodeModel.Addresses" Width="1.5" PointX="0.75" PointY="8.75" />
+        <EntityTypeShape EntityType="Canada2DCodeModel.CustomerEmail" Width="1.5" PointX="2.75" PointY="8.75" />
+        <EntityTypeShape EntityType="Canada2DCodeModel.CustomerPhone" Width="1.5" PointX="4.75" PointY="9.75" />
+        <EntityTypeShape EntityType="Canada2DCodeModel.Object2DCode" Width="1.5" PointX="6.75" PointY="9.75" />
+        <EntityTypeShape EntityType="Canada2DCodeModel.Organization" Width="1.5" PointX="10.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Canada2DCodeModel.Production_Categories" Width="1.5" PointX="12.625" PointY="10.875" />
+        <EntityTypeShape EntityType="Canada2DCodeModel.Roles" Width="1.5" PointX="12.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Canada2DCodeModel.User_Roles" Width="1.5" PointX="0.75" PointY="12.75" />
+        <AssociationConnector Association="Canada2DCodeModel.FK_Customers_Address" />
+        <EntityTypeShape EntityType="Canada2DCodeModel.ObjectEvent" Width="1.5" PointX="3.375" PointY="12.75" />
+        <EntityTypeShape EntityType="Canada2DCodeModel.ObjectPerson" Width="1.5" PointX="5.375" PointY="13.75" />
+        <EntityTypeShape EntityType="Canada2DCodeModel.ObjectProduction" Width="1.5" PointX="7.375" PointY="13.75" />
+        <EntityTypeShape EntityType="Canada2DCodeModel.ObjectTbl" Width="1.5" PointX="9.375" PointY="11.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

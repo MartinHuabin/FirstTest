@@ -1,0 +1,90 @@
+﻿
+<div ng-controller="rootViewModel">
+    <div id="ScanQRCode">
+        <br />
+        <div class="row" style="display:inline-block;">
+
+            <label style="margin-left:20px;margin-top:30px;display:block;width:400px;">{{pageHeading}}</label>
+            <div style="margin-left:200px;display:block;width:400px;">
+
+                <form class="form" enctype="multipart/form-data">
+
+                    <input style="width:300px;" type="file" name="FileUpload" id="FileUpload" onchange="angular.element(this).scope().AddFiles(this)" />
+
+                </form>
+                <input type="submit" value="Get QRCode" class="btn btn-default" ng-click="ScanQRCodeFn()" />
+
+                <br /><br /><br />
+            </div>
+        </div>
+
+        @*<div class="row" ng-show="ScanQRCodes.scanContent" style="width:600px;margin-left:20px; padding-left:10px">
+            <label>ScanContent: {{ScanQRCodes.scanContent}} </label>
+        </div>
+        {{ScanQRCodes.scanContent}}*@
+        <div class="row" ng-show="ScanQRCodes.scanContent" style="width:600px;margin-left:20px; padding-left:10px">
+            <span>{{ScanQRCodes.scanType}} - </span>
+            <span><input type="button" class="btn btn-info" value={{ScanQRCodes.scanContent}} style="width:500px;margin-left:20px;" /></span>
+
+            <br /> <br />
+        </div>
+
+        @*<div>
+            <table border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td align="center"><u>Live Camera</u></td>
+                    <td></td>
+                    <td align="center"><u>Captured Picture</u></td>
+                </tr>
+                <tr>
+                    <td><div id="webcam"></div> </td>
+                    <td> &nbsp;</td>
+                    <td><img id="imgCapture" style="visibility: hidden; width: 320px;height: 240px" /></td>
+                </tr>
+            </table>
+            <br />
+            <input type="button" value="Capture" onclick="Capture();" />
+            <br />
+            <span id="camStatus"></span>
+        </div>*@
+    </div>
+        @*<script type="text/javascript">
+            $(function () {
+                jQuery("#webcam").webcam({
+                    width: 320,
+                    height: 240,
+                    mode: "save",
+                    swffile: '/Webcam_Plugin/jscam.swf',
+                    debug: function (type, status) {
+                        $('#camStatus').append(type + ": " + status + '<br /><br />');
+                    },
+                    onSave: function (data, ab) {
+                        $.ajax({
+                            type: "POST",
+                            url: '/Home/GetCapture',
+                            data: '',
+                            contentType: "application/json; charset=utf-8",
+                            dataType: "text",
+                            success: function (r) {
+                                $("#imgCapture").css("visibility", "visible");
+                                $("#imgCapture").attr("src", r);
+                            },
+                            failure: function (response) {
+                                alert(response.d);
+                            }
+                        });
+                    },
+                    onCapture: function () {
+                        webcam.save('/Home/Capture');
+                    }
+                });
+            });
+            function Capture() {
+                webcam.capture();
+            }
+        </script>*@
+    </div>
+
+@section scripts{
+    <script src="~/Scripts/AngularController/Part4Controller.js"></script>
+}

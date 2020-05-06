@@ -1,0 +1,225 @@
+﻿<script type="text/javascript">
+    $(document).ready(function () {
+
+        $('.mobileSlider').flexslider({
+            animation: "slide",
+            slideshowSpeed: 3000,
+            controlNav: false,
+            directionNav: true,
+            prevText: "&#171;",
+            nextText: "&#187;"
+        });
+        $('.flexslider').flexslider({
+            animation: "slide",
+            directionNav: false
+        });
+
+        $('a[href*=\\#]:not([href=\\#])').click(function () {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if ($(window).width() < 768) {
+                    if (target.length) {
+                        $('html,body').animate({
+                            scrollTop: target.offset().top - $('.navbar-header').outerHeight(true) + 1
+                        }, 1000);
+                        return false;
+                    }
+                }
+                else {
+                    if (target.length) {
+                        $('html,body').animate({
+                            scrollTop: target.offset().top - $('.navbar').outerHeight(true) + 1
+                        }, 1000);
+                        return false;
+                    }
+                }
+
+            }
+        });
+
+        $('#toTop').click(function () {
+            $('html,body').animate({
+                scrollTop: 0
+            }, 1000);
+        });
+
+        var timer;
+        $(window).bind('scroll', function () {
+            clearTimeout(timer);
+            timer = setTimeout(refresh, 50);
+        });
+        var refresh = function () {
+            if ($(window).scrollTop() > 100) {
+                $(".tagline").fadeTo("slow", 0);
+            }
+            else {
+                $(".tagline").fadeTo("slow", 1);
+            }
+        };
+
+    });
+</script>
+<div ng-controller="HomeController">
+
+    <div class="container body-content">
+
+        <div>
+            <div id="topWrap" class="jumbotron">
+                <div class="container">
+                    <div class="col-md-6 col-md-push-6 jumboText">
+                        <h1>Canada2DCode</h1>
+                      
+                        <a class="btn btn-lg btn-success actionBtn" href="#"><i class="fa fa-mobile fa-4x pull-left"></i><span class="line1">Available on the</span><br /><span class="line2">App Store</span></a>
+                    </div>
+                    <div class="col-md-6 col-md-pull-6 hidden-xs">
+                        <div class="mobile">
+                            <div class="mobileSlider">
+                                <ul class="slides">
+                                    <li>
+                                        <img src="./LandingPageContent/assets/img/screen1.jpg" />
+                                      
+                                    </li>
+                                    <li>
+
+                                        <img src="./LandingPageContent/assets/img/screen2.jpg" />
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="featureWrap">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-4 text-center feature">
+                            <i class="fa fa-tablet icon"></i>
+                            <h3>Registration and Resolution Service</h3>
+                            <p>
+                                This platform is open to companies all over the world, providing two-dimensional code registration and resolution service, unified management two-dimensional code identification in a global scale.
+                            </p>
+                        </div>
+                        <div class="col-sm-4 text-center feature">
+                            <i class="fa fa-pencil icon"></i>
+                            <h3>Accreditation and certification service</h3>
+                            <p>
+                                Certification service of two-dimensional code identification, based on the third-party assessment , the judgment result is given and the certificate of conformity is issued by the UTC accreditation office.
+                            </p>
+                        </div>
+                        <div class="col-sm-4 text-center feature">
+                            <i class="fa fa-star icon"></i>
+                            <h3>Information Service</h3>
+                            <p>
+                                identification and accreditation certificate ;  Provide a global directory of quality service providers.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- /featureWrap -->
+
+            <div id="productWrap" class="altWrap">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h2 class="sectionTitle">registration and resolution ID Code</h2>
+                            <h3 class="sectionTitle">IDcode (Identity code) is a mechanism for unified management of the ID of different objects. It is used to perform two-dimensional code identification on any type of objects (person, thing, item) globally, namely creating the "two-dimensional code ID".​</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5 col-md-offset-1">
+                            <div class="imgWrap">
+                                <img class="img-responsive" src="./LandingPageContent/assets/img/tablet.png" />
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="productFeatures clearfix">
+                                <div class="col-xs-2 icon">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-trophy fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </div>
+                                <div class="col-xs-10">
+                                    <h3>Enterprise 2D code</h3>
+                                    <p>A two-dimensional code that introduces the business and its products, including: corporate logo, company profile, main business, product introduction, contact us, one-touch dialing, LBS map navigation, etc.</p>
+                                </div>
+                                <div class="col-xs-2 icon">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-cog fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </div>
+                                <div class="col-xs-10">
+                                    <h3>Product 2D code</h3>
+                                    <p>A two-dimensional code specially designed to introduce the detailed information of the company's products, including: product image, product price, product graphic introduction, company profile, contact information, etc.</p>
+                                </div>
+                                <div class="col-xs-2 icon">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-bars fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </div>
+                                <div class="col-xs-10">
+                                    <h3>Anti-counterfeiting 2D code</h3>
+                                    <p>A two-dimensional code for enterprise product anti-counterfeiting verification, including product scrolling image display, product introduction, product security code, anti-counterfeiting verification, origin generation, date of creation, product expiration date, etc.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- /productWrap -->
+
+                  
+
+            <div id="contactWrap">
+                <div class="overlay">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <h2 class="sectionTitle">Contact us</h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 text-center">
+                                <div class="blurb">
+                                    Want to chat? Send us a message. We'd love to hear from you!
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4 col-sm-offset-2">
+                                <div class="inputContainer">
+                                    <label>Name</label>
+                                    <input type="text" name="contactName" id="contactName" value="" class="form-control" autocomplete="off" />
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="inputContainer">
+                                    <label class="screen-reader-text">Email</label>
+                                    <input type="text" name="email" id="email" value="" class="form-control" autocomplete="off" />
+                                </div>
+                            </div>
+                            <div class="col-sm-8 col-sm-offset-2">
+                                <div class="inputContainer">
+                                    <label class="screen-reader-text">Message</label>
+                                    <textarea name="comments" id="commentsText" class="form-control" autocomplete="off"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-sm-8 col-sm-offset-2">
+                                <button name="submit" type="button" class="btn btn-primary btn-lg">Send</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+ 
+        </div>
+
+
+    </div>
+
+</div>

@@ -1,0 +1,67 @@
+﻿<div ng-controller="AboutController">
+
+    <div>
+        <h4 class="col-md-6" style="font-weight: bold;margin-left:6px;">Object List</h4>
+        
+        <br /><hr>
+    </div>
+    <section id="welcome" class="tm-content-box tm-banner margin-b-10" style="position: -webkit-sticky; top: 0; padding: 4px; margin-top:10px; overflow: auto; height: auto; border: 1px solid black;">
+        <div class="tm-banner-inner">
+
+            <div class="row">
+                <div>
+                    <a ng-click="GetCustomeData()">Product List</a>
+                </div>
+
+            </div>
+
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>
+                            CustomerId
+                        </th>
+                        <th>
+                            FirstName
+                        </th>
+                        <th>
+                            LastName
+                        </th>
+                        <th>
+                            Email
+                        </th>
+                        <th>
+                            QR-Code Url
+                        </th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="obj in customers">
+                        <td style="cursor: default;">
+                            <a ng-href="" ng-click="redirectToGoogle(obj.Url)">{{obj.customerId}}-{{obj.url}}</a>
+
+                        </td>
+                        <td>
+                            {{obj.firstName}}
+                        </td>
+                        <td>
+                            {{obj.lastName}}
+                        </td>
+                        <td>
+                            {{obj.email}}
+                        </td>
+                        <td>
+
+                            <img src="@Url.Action(" ReadProduct", "Home" )?userid={{obj.url}}" width="100" height="100" />
+                          
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </section>
+
+
+</div>

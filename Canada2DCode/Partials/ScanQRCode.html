@@ -1,0 +1,36 @@
+﻿<div ng-controller="rootViewModel">
+    <div id="ScanQRCode">
+        <br />
+        <div class="row" style="display:inline-block;">
+
+            <label style="margin-left:20px;margin-top:30px;display:block;width:400px;">{{pageHeading}}</label>
+            <div style="margin-left:200px;display:block;width:400px;">
+
+                <form class="form" enctype="multipart/form-data">
+
+                    <input style="width:300px;" type="file" name="FileUpload" id="FileUpload" onchange="angular.element(this).scope().AddFiles(this)" />
+
+
+                </form>
+                <input type="submit" value="Get QRCode" class="btn btn-default" ng-click="ScanQRCodeFn()" />
+
+                <br /><br /><br />
+            </div>
+        </div>
+
+        <div class="row" ng-show="ScanQRCodes.scanContent" style="width:600px;margin-left:20px; padding-left:10px">
+            <label>ScanContent: {{ScanQRCodes.scanContent}} </label>
+        </div>
+
+        <div class="row" ng-show="ScanQRCodes.scanContent" style="width:600px;margin-left:20px; padding-left:10px">
+            <span>{{ScanQRCodes.scanType}} - </span>
+            <span><input type="button" class="btn btn-info" value={{ScanQRCodes.scanContent}} style="width:500px;margin-left:20px;" /></span>
+
+            <br /> <br />
+        </div>
+
+       
+    </div>
+   
+</div>
+

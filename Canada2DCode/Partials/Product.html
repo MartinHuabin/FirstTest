@@ -1,0 +1,63 @@
+﻿<div id="product" data-ng-controller="rootViewModel">
+ 
+    <div class="row">
+        <div class="col-md-4">
+            <button class="btn btn-primary" ng-click="GetCustomeData()">Product List</button>
+        </div>
+  
+    </div>
+
+
+   <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>
+                    CustomerId
+                </th>
+                <th>
+                    FirstName
+                </th>
+                <th>
+                    LastName
+                </th>
+                <th>
+                    Email
+                </th>
+                <th>
+                    QR-Code Url
+                </th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="obj in customers">
+                <td style="cursor: default;">
+                    <a ng-href="" ng-click="redirectToGoogle(obj.Url)">{{obj.customerId}}-{{obj.url}}</a>
+
+                </td>
+                <td>
+                    {{obj.firstName}}
+                </td>
+                <td>
+                    {{obj.lastName}}
+                </td>
+                <td>
+                    {{obj.email}}
+                </td>
+                <td>
+
+                    <!--<img src="@Url.Action(" ReadProduct", "Home" )?userid={{obj.url}}" width="100" height="100" />
+
+                    <img src="@Url.Action(" ReadProduct", "Home" ,new {userid="{{obj.Url}}" })" width="100" height="100" />-->
+
+
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+
+    <div ng-view></div>
+</div>

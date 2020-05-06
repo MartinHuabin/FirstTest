@@ -1,0 +1,588 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canada2DCode</title>
+
+
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/Site.css" rel="stylesheet" />
+
+    <script src="Scripts/modernizr-2.8.3.js"></script>
+    <script src="Scripts/jquery-3.4.1.js"></script>
+    <script src="Scripts/jquery-3.4.1.intellisense.js"></script>
+    <script src="Scripts/jquery-3.4.1.slim.js"></script>
+
+
+    <script src="Scripts/bootstrap.js"></script>
+    <script src="Scripts/respond.js"></script>
+
+    <!--<script src="Scripts/angular.js"></script>
+    <script src="Scripts/angular-route.js"></script>
+    <script src="Scripts/angular-cookies.js"></script>-->
+
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400">
+    <link href="LandingPageContent/css/custom.css" rel="stylesheet" />
+
+    <link href="LandingPageContent/css/flexslider.css" rel="stylesheet" />
+
+  
+    <link rel="shortcut icon" href="~/LandingPageContent/assets/ico/Canada2dCode_Logo_d200.png">
+    <link href="LandingPageContent/css/magnific-popup.css" rel="stylesheet" />
+    <link href="LandingPageContent/css/templatemo-style.css" rel="stylesheet" />
+    <link href="Content/font-awesome-4.6.3/css/font-awesome.min.css" rel="stylesheet" />
+
+
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Noto+Sans:400,700' rel='stylesheet' type='text/css'>
+    
+
+    <script src="Scripts/_references.js"></script>
+    <script src="Scripts/jquery.sticky-sidebar.js"></script>
+    <script src="Scripts/jquery.magnific-popup.min.js"></script>
+    <script src="Scripts/jquery.singlePageNav.min.js"></script>
+    <script src="LandingPageContent/js/flexslider.js"></script>
+    <script src="Scripts/C2dApp.js"></script>
+    <script src="https://www.atlasestateagents.co.uk/javascript/tether.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $('.mobileSlider').flexslider({
+                animation: "slide",
+                slideshowSpeed: 3000,
+                controlNav: false,
+                directionNav: true,
+                prevText: "&#171;",
+                nextText: "&#187;"
+            });
+            $('.flexslider').flexslider({
+                animation: "slide",
+                directionNav: false
+            });
+
+            $('a[href*=#]:not([href=#])').click(function () {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    if ($(window).width() < 768) {
+                        if (target.length) {
+                            $('html,body').animate({
+                                scrollTop: target.offset().top - $('.navbar-header').outerHeight(true) + 1
+                            }, 1000);
+                            return false;
+                        }
+                    }
+                    else {
+                        if (target.length) {
+                            $('html,body').animate({
+                                scrollTop: target.offset().top - $('.navbar').outerHeight(true) + 1
+                            }, 1000);
+                            return false;
+                        }
+                    }
+
+                }
+            });
+
+            $('#toTop').click(function () {
+                $('html,body').animate({
+                    scrollTop: 0
+                }, 1000);
+            });
+
+            var timer;
+            $(window).bind('scroll', function () {
+                clearTimeout(timer);
+                timer = setTimeout(refresh, 50);
+            });
+            var refresh = function () {
+                if ($(window).scrollTop() > 100) {
+                    $(".tagline").fadeTo("slow", 0);
+                }
+                else {
+                    $(".tagline").fadeTo("slow", 1);
+                }
+            };
+
+        });
+    </script>
+
+</head>
+<body data-ng-app="main">
+
+    <div class="navbar navbar-inverse navbar-fixed-top" style="display:inline-block;background-color:gainsboro;text-align: center;height:60px;">
+
+
+
+        <div class="navbar-header" style="margin-left:20px;">
+
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <a class="navbar-brand" href="#topWrap">
+                <span>
+                    <img src="Images/Canada2dCode_Logo_d200.png" alt="Smiley face" height="42" width="60" />
+                   
+                </span>
+                <span class="title" style="font-family:Arial;  font-size: 30px;">Canada2DCode</span>
+            </a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-left">
+                <li><a href="#featureWrap">Service</a></li>
+                <li><a href="#pricingWrap">Product</a></li>
+                <li><a href="#testimonialsWrap">About</a></li>
+                <li><a href="#careerWrap">Careers</a></li>
+                <li><a href="#contactWrap">Contact</a></li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right" style="margin-right:60px;">
+
+                <li><a href="#topWrap">Login</a></li>
+                <li><a href="#topWrap">Register</a></li>
+                <!--<li><a href="/Canada2DCodeSite/product">2D Code List</a></li>
+                <li><a href="/Canada2DCodeSite/ScanQRCode">Scan 2D Code</a></li>-->
+
+            </ul>
+
+        </div>
+
+
+
+    </div>
+    <div class="container body-content">
+
+        <!--<div>-->
+            <div id="topWrap" class="jumbotron">
+                <div class="container">
+                    <div class="col-md-6 col-md-push-6 jumboText">
+                        <h1>Canada2DCode Inc</h1>
+                        <h2>Two-Dimensional Barcode Registration System</h2>
+                        <a class="btn btn-lg btn-success actionBtn" href="#"><i class="fa fa-mobile fa-4x pull-left"></i>
+                        <span class="line1">Available on the</span><br />
+                        <span class="line2">App Store</span></a>
+                    </div>
+                    <div class="col-md-6 col-md-pull-6 hidden-xs">
+                        <div class="mobile">
+                            <div class="mobileSlider">
+                                <ul class="slides">
+                                    <li>
+                                        <img src="LandingPageContent/assets/img/screen1.jpg" />
+                                    </li>
+                                    <li>
+                                        <img src="LandingPageContent/assets/img/screen2.jpg" />
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div id="testimonialsWrap" class="altWrap">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h2 class="sectionTitle">Canada Two-Dimensional Barcode Association</h2>
+                            <h2 class="sectionTitle">Canada Two-Dimensional Barcode Technology Inc.</h2>
+                            <h3>Canada Two-Dimensional Barcode Association (CTBA) is a neutral, non-profit organization found in 2018 and based in Toronto. CTBA is focus on standardization of Two-Dimensional Codes that are used for industries and commercial units and provides the services to enterprises and individuals on code generation, registration, storage and usage through Canada Two-Dimensional Barcode Technology Inc (CTBT).</h3>
+                            <h3>Since its founded, CTBA has recrewed professional technician team and management team. Our team members believe that 2D Barcode system is much more advanced than 1D Barcode system. Moreover, with properly regulated and managed, 2D Barcode system will be an efficient, safe, reliable system suitable for almost every industry.</h3>
+                            <h3>CTBA will play key role to collaborate and communicate with national and international related organizations (like ISO, CEN, GS1, UTC, etc); to coordinate and ensure a secure, safe and unique code system that is applied for identifying objects and events globally. The system will maintain the sustainability and visibility cross different business sections.</h3>
+
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="flexslider">
+                                <ul class="slides">
+                                    <li>
+                                        <div class="quote">"Etizzle laoreet doggy dope nisl. Dang pulvinizzle, ipsizzle dawg."</div>
+                                        <div class="author">Martin Nizzle</div>
+                                    </li>
+                                    <li>
+                                        <div class="quote">"Crazy tellus urna, yo mamma check out this, eleifend you son of a bizzle."</div>
+                                        <div class="author">Jennifer Aliquizzle</div>
+                                    </li>
+                                    <li>
+                                        <div class="quote">"Praesent i saw beyonces tizzles and my pizzle went crizzle turpizzle."</div>
+                                        <div class="author">William Lorizzle</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- /testimonialsWrap -->
+            <div id="featureWrap">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-4 text-center feature">
+                            <i class="fa fa-tablet icon"></i>
+                            <h3>Registration and Resolution Service</h3>
+                            <p>
+                                This platform is open to companies all over the world, providing two-dimensional code registration and resolution service, unified management two-dimensional code identification in a global scale.
+                            </p>
+                        </div>
+                        <div class="col-sm-4 text-center feature">
+                            <i class="fa fa-pencil icon"></i>
+                            <h3>Accreditation and certification service</h3>
+                            <p>
+                                Certification service of two-dimensional code identification, based on the third-party assessment , the judgment result is given and the certificate of conformity is issued by the UTC accreditation office.
+                            </p>
+                        </div>
+                        <div class="col-sm-4 text-center feature">
+                            <i class="fa fa-star icon"></i>
+                            <h3>Information Service</h3>
+                            <p>
+                                identification and accreditation certificate ;  Provide a global directory of quality service providers.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- /featureWrap -->
+
+
+            <div id="productWrap" class="altWrap">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h2 class="sectionTitle">registration and resolution ID Code</h2>
+                            <h3 class="sectionTitle">IDcode (Identity code) is a mechanism for unified management of the ID of different objects. It is used to perform two-dimensional code identification on any type of objects (person, thing, item) globally, namely creating the "two-dimensional code ID".​</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5 col-md-offset-1">
+                            <div class="imgWrap">
+                                <img class="img-responsive" src="LandingPageContent/assets/img/tablet.png" />
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="productFeatures clearfix">
+                                <div class="col-xs-2 icon">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-trophy fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </div>
+                                <div class="col-xs-10">
+                                    <h3>Enterprise 2D code</h3>
+                                    <p>A two-dimensional code that introduces the business and its products, including: corporate logo, company profile, main business, product introduction, contact us, one-touch dialing, LBS map navigation, etc.</p>
+                                </div>
+                                <div class="col-xs-2 icon">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-cog fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </div>
+                                <div class="col-xs-10">
+                                    <h3>Product 2D code</h3>
+                                    <p>A two-dimensional code specially designed to introduce the detailed information of the company's products, including: product image, product price, product graphic introduction, company profile, contact information, etc.</p>
+                                </div>
+                                <div class="col-xs-2 icon">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-bars fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </div>
+                                <div class="col-xs-10">
+                                    <h3>Anti-counterfeiting 2D code</h3>
+                                    <p>A two-dimensional code for enterprise product anti-counterfeiting verification, including product scrolling image display, product introduction, product security code, anti-counterfeiting verification, origin generation, date of creation, product expiration date, etc.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- /productWrap -->
+
+
+            <div id="pricingWrap">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h2 class="sectionTitle">Two-Dimensional  Barcode  Registration Centre (TBRC)</h2>
+                            <h3> ▰	A information technology system that allow users to generate, registry, and manage their 2D code.</h3>
+                            <h3> ▰	The system integrated with most different types of 2D codes. </h3>
+                            <h3> ▰	The system is built in Canada, data is stored in Canada. </h3>
+                            <h3> ▰	Conformity of Canadian and international standards.	</h3>
+                            <h3> ▰	Easy to use and integrated with all type of business.</h3>
+                            <h3> ▰	Safe and secure.</h3>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!--<div id="pricingWrap">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2 class="sectionTitle">Ready to get started?</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <ul class="priceTable">
+                        <li class="title">Basic Plan</li>
+                        <li class="description">For basic people</li>
+                        <li class="price">$9.99</li>
+                        <ul class="features">
+                            <li>Phasellizzle brizzle</li>
+                            <li>Crizzle aliquizzle</li>
+                            <li>And a lot more gizzle</li>
+                        </ul>
+                        <li class="call">
+                            <a class="btn btn-success btn-lg" href="#">Buy Now</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-4">
+                    <ul class="priceTable alt">
+                        <li class="title">Super Plan</li>
+                        <li class="description">For super people</li>
+                        <li class="price">$19.99</li>
+                        <ul class="features">
+                            <li>Phasellizzle brizzle</li>
+                            <li>Crizzle aliquizzle</li>
+                            <li>And a lot more gizzle</li>
+                        </ul>
+                        <li class="call">
+                            <a class="btn btn-success btn-lg" href="#">Buy Now</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-4">
+                    <ul class="priceTable">
+                        <li class="title">Awesome Plan</li>
+                        <li class="description">For awesome people</li>
+                        <li class="price">$29.99</li>
+                        <ul class="features">
+                            <li>Phasellizzle brizzle</li>
+                            <li>Crizzle aliquizzle</li>
+                            <li>And a lot more gizzle</li>
+                        </ul>
+                        <li class="call">
+                            <a class="btn btn-success btn-lg" href="#">Buy Now</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>-->
+            <!-- /pricingWrap -->
+
+            <div id="careerWrap" style="margin-top:60px;padding-top: 60px;">
+                <div class="container">
+                    <h2 class="sectionTitle">Careers</h2>
+                    <h3>Canada2Dcode offers a challenging, exciting work environment that allows individuals to achieve career success by pursuing their passion in leading edge technologies in the global market. </h3>
+                    <h3>Canada2Dcode is committed to supporting academic excellence and lifelong learning by providing a meaningful work experience that complements a student’s career direction. The objective of the student co-op program is to provide a feeder system of highly-qualified and highly-motivated students for permanent hire upon graduating into this or another high-technology organization. </h3>
+                    <p style="font-family:'Arial'; font-size:22px; color:black"> We are currently hiring Web Designers and Developers. Please forard your application to</p> <p style="font-family:'Arial'; font-size:22px;color:blue"> hr@canada2d.com.</p>
+
+                    <br>
+                    <h2 class="sectionTitle">Jobs</h2>
+                    <h3> Web Desiners and Developers: </h3>
+
+                    <p style="font-family:'Arial'; font-size:22px; color:blue">
+                        Canada2Dcode  is a rapidly growing digital platform services provider located in Toronto. We are looking for an experienced Web Developer to help develop custom websites/solutions & apps for our clients. The ideal candidate has a natural curiosity about technology and software development, and has a constant desire to learn about new technologies. We are looking for someone with strong communication skills that has the ability to succeed in a results driven environment.
+                    </p>
+
+                    <p style="font-family:'Arial'; font-size:22px; color:blue">
+                        Requirements:
+                    </p>
+                    <p style="font-family:'Arial'; font-size:22px; color:blue">
+
+                        General understanding and knowledge of front-end development;
+                        Proficiency using modern web development technologies and techniques, including of Microsoft Visual Studio, SQL Server or MySQL, HTML5, CSS, JavaScript, Responsive Design, web services, etc.;
+                        Design skills, including active prototyping a plus;
+                        General knowledge of e-commerce, marketing, and advertising is a plus;
+                        You have strong communication skills - explaining complex technical concepts to designers, support, and other engineers is easy for you;
+                        You have a desire to continuously learn and develop your skills;
+                        You're hands on and like to be involved in all areas of a company;
+                        You are a team player - you are always willing to lend a helping hand;
+                        You enjoy working in a fast-paced, growing environment;
+                        You are not complacent and you want an opportunity to grow and continue to develop your skills.
+                    </p>
+                    <p style="font-family:'Arial'; font-size:22px; color:blue">
+                        Benefits
+                    </p>
+                    <p style="font-family:'Arial'; font-size:22px; color:blue">
+                        Very friendly, comfortable, and flexible work environment;
+                        Opportunity to grow with a growing company;
+                        Opportunity to utilize your full skill-set on a daily basis;
+                        Opportunity to use your creativity to create and implement your own designs;
+                        Opportunity to learn and implement new skills;
+                        Opportunity to "wear multiple hats" - work with many different aspect of our business.
+                    </p>
+
+                </div>
+            </div>
+
+            <!--<div id="testimonialsWrap" class="altWrap">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2 class="sectionTitle">What We Do?</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="flexslider">
+                        <ul class="slides">
+                            <li>
+                                <div class="quote">"Etizzle laoreet doggy dope nisl. Dang pulvinizzle, ipsizzle dawg."</div>
+                                <div class="author">Martin Nizzle</div>
+                            </li>
+                            <li>
+                                <div class="quote">"Crazy tellus urna, yo mamma check out this, eleifend you son of a bizzle."</div>
+                                <div class="author">Jennifer Aliquizzle</div>
+                            </li>
+                            <li>
+                                <div class="quote">"Praesent i saw beyonces tizzles and my pizzle went crizzle turpizzle."</div>
+                                <div class="author">William Lorizzle</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div-->
+            <!-- /testimonialsWrap -->
+
+            <div id="contactWrap">
+                <div class="overlay">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <h2 class="sectionTitle">Contact us</h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 text-center">
+                                <div class="blurb">
+                                    Want to chat? Send us a message. We'd love to hear from you!
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4 col-sm-offset-2">
+                                <div class="inputContainer">
+                                    <label>Name</label>
+                                    <input type="text" name="contactName" id="contactName" value="" class="form-control" autocomplete="off" />
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="inputContainer">
+                                    <label class="screen-reader-text">Email</label>
+                                    <input type="text" name="email" id="email" value="" class="form-control" autocomplete="off" />
+                                </div>
+                            </div>
+                            <div class="col-sm-8 col-sm-offset-2">
+                                <div class="inputContainer">
+                                    <label class="screen-reader-text">Message</label>
+                                    <textarea name="comments" id="commentsText" class="form-control" autocomplete="off"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-sm-8 col-sm-offset-2">
+                                <button name="submit" type="button" class="btn btn-primary btn-lg">Send</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--end-->
+
+        </div>
+
+  
+    <div class="element-content-box design-element-content-box user-selectable-element clickable-element has-popup image-element" data-element-id="id1560395829148"><div class="content-container content-container-type element-size-box element-size-target user-selectable-element clickable-element has-popup image-element" style="min-height: 5px;" data-element-id="id1560395829148"></div></div>
+    <div class="content-container content-container-type element-size-box element-size-target header-element section-element-size-box">
+
+        <hr />
+
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 text-center">
+                        <p>Copyright &copy;2019 <a href="https://canada2d.com">Canada 2D code</a>. All Rights Reserved</p>
+                        <p class="social">
+                            <a href="https://www.facebook.com/bootstrapbay">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                            <a href="https://twitter.com/bootstrapbay">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                            <a href="https://plus.google.com/+BootstrapbayThemes">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                            <a href="http://www.youtube.com/user/bootstrapbayofficial">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-youtube fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <script type="text/javascript">
+        window.MyApp = {};
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

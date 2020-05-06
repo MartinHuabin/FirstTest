@@ -1,0 +1,70 @@
+﻿<div ng-controller="AboutController">
+
+    <div>
+        <h4 class="col-md-6" style="font-weight: bold;margin-left:6px;">Object List</h4>
+        
+        <br /><hr>
+    </div>
+    <section class="tm-content-box tm-banner margin-b-10" style="position: -webkit-sticky; top: 0; padding: 4px; margin-top:10px; overflow: auto; height: auto; border: 1px solid black;">
+        <div class="tm-banner-inner">
+
+            <div class="row">
+                <div>
+                    <span ng-click="GetCustomeData()" style="width:100px;margin-left:10px;text-align: left;">Object List(Person)</span>
+
+
+                    <span class="btn btn-success" ng-click="addnewobjectitem()"><i class="fa fa-plus"></i>Add New Person</span>
+                </div>
+
+            </div>
+
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>
+                            ObjectId
+                        </th>
+                        <th>
+                            ObjectName
+                        </th>
+                        <th>
+                            ObjectType
+                        </th>
+                        <th>
+                            Project
+                        </th>
+                        <th>
+                            QR-Code Url
+                        </th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="obj in ObjectList">
+                        <td style="cursor: default;">
+                           
+                           <a ng-click="redirectToGoogle(obj.contentsURL )"><i class="fa fa-pencil"></i>{{obj.object_id}}-{{obj.object_name}}</a>
+                        </td>
+                        <td>
+                            {{obj.objectPersonData.person_Name}}
+                        </td>
+                        <td>
+                            {{getPersonType(obj.objectPersonData.personType)}}
+                        </td>
+                        <td>
+                           {{getC2DCodeType(obj.objectPersonData.c2DCodeType)}}
+                        </td>
+                        <td>
+                            <img data-ng-src ="data:image/png;base64,{{obj.qrCode}}" width="80" height="80"/>
+                           
+
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </section>
+
+
+</div>

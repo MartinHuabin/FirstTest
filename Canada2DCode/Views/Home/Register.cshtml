@@ -1,0 +1,61 @@
+﻿
+<div ng-controller="Part3Controller">
+   
+    <div class="row">
+        <div class="col-md-6 col-sm-8 col-xs-12 col-md-offset-3 col-sm-offset-2">
+            <div class="register-form">
+                 <br><br />
+                    <h2 class="text-center">Registration</h2>
+                    <p class="hint-text">Create your account. It's free and takes just a minute.</p>
+                    <div class="row">
+                        <div class="col-md-6 col-xs-12">
+                            <div class="form-group">
+                                <input type="text" name="first_name" class="form-control" placeholder="First Name" required="required" ng-model="Customer.FirstName">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xs-12">
+                            <div class="form-group">
+                                <input type="text" name="last_name" class="form-control" placeholder="Last Name" required="required" ng-model="Customer.LastName">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" class="form-control" placeholder="Email" required="required" ng-model="Customer.Email">
+                    </div>
+                    <div class="form-group">
+                        <input type="url" name=" Url" class="form-control" placeholder="Url" required="required" ng-model="Customer.Url">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" name="password" class="form-control" placeholder="Password" required="required" ng-model="Customer.Password">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" name="confirm_password" class="form-control" placeholder="Confirm Password" required="required" ng-model="Customer.ConfirmPassword">
+                    </div>
+                    <div class="form-group">
+                        <label class="checkbox-inline">
+                            <input type="checkbox" required="required" ng-model="Customer.Conditions_BT"> You agree to the <a href="#">Terms</a> & <a href="#">Conditions</a>.
+                        </label>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-xs-12">
+                            <div class="form-group">
+                                <input type="submit" value="Register" class="btn btn-primary btn-block btn-lg" tabindex="7" ng-click="RegisterData()">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xs-12">
+                            <div class="form-group">
+                              
+                                <a href="/Canada2DCode/home/Customer" class="btn btn-success btn-block btn-lg">Sign In</a>
+                            </div>
+                        </div>
+                    </div>
+             </div>
+        </div>
+    </div>
+</div>
+
+
+
+@section scripts{
+    <script src="~/Scripts/AngularController/Part3Controller.js"></script>
+}

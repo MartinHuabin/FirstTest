@@ -1,0 +1,994 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Canada2DCodeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Addresses">
+          <Key>
+            <PropertyRef Name="AddID_PK" />
+          </Key>
+          <Property Name="AddID_PK" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Address1" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="Address2" Type="nvarchar" MaxLength="250" />
+          <Property Name="Address3" Type="nvarchar" MaxLength="250" />
+          <Property Name="City" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="State" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="Country" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="PostalCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="IsInActive" Type="bit" />
+          <Property Name="Note" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="OrganizationID_FK" Type="int" />
+        </EntityType>
+        <EntityType Name="Contacts">
+          <Key>
+            <PropertyRef Name="ContactID" />
+          </Key>
+          <Property Name="ContactID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FirstName" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="LastName" Type="varchar" MaxLength="100" />
+          <Property Name="ContactNo1" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="ContactNo2" Type="varchar" MaxLength="20" />
+          <Property Name="EmailID" Type="varchar" MaxLength="200" />
+          <Property Name="Address" Type="varchar" MaxLength="300" />
+        </EntityType>
+        <EntityType Name="Country">
+          <Key>
+            <PropertyRef Name="CountryID" />
+          </Key>
+          <Property Name="CountryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CountryName" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="CountryCode2D" Type="nvarchar" MaxLength="10" />
+          <Property Name="CountryCode3D" Type="nvarchar" MaxLength="10" />
+          <Property Name="CountryNameCN" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="CustomerEmail">
+          <Key>
+            <PropertyRef Name="CustomerEmailID" />
+          </Key>
+          <Property Name="CustomerEmailID" Type="int" Nullable="false" />
+          <Property Name="CustomerEmail" Type="nvarchar" MaxLength="250" />
+          <Property Name="CustomeID" Type="int" />
+          <Property Name="IsinActive" Type="bit" />
+          <Property Name="QueueCode" Type="int" />
+        </EntityType>
+        <EntityType Name="CustomerPhone">
+          <Key>
+            <PropertyRef Name="CustomerPhoneID" />
+          </Key>
+          <Property Name="CustomerPhoneID" Type="int" Nullable="false" />
+          <Property Name="CustomerPhone" Type="nvarchar" MaxLength="250" />
+          <Property Name="CustomeID" Type="int" />
+          <Property Name="IsinActive" Type="bit" />
+          <Property Name="QueueCode" Type="int" />
+        </EntityType>
+        <EntityType Name="Customers">
+          <Key>
+            <PropertyRef Name="CustomerId" />
+          </Key>
+          <Property Name="CustomerId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="250" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="250" />
+          <Property Name="Email" Type="nvarchar" MaxLength="250" />
+          <Property Name="Password" Type="nvarchar" MaxLength="500" />
+          <Property Name="PasswordKey" Type="nvarchar" MaxLength="500" />
+          <Property Name="Conditions_BT" Type="bit" />
+          <Property Name="Url" Type="nvarchar" MaxLength="500" />
+          <Property Name="AddID_FK" Type="int" />
+          <Property Name="Telephone" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="Employees">
+          <Key>
+            <PropertyRef Name="EmployeeID" />
+          </Key>
+          <Property Name="EmployeeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FirstName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="LastName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="HireDate" Type="datetime" />
+          <Property Name="Address" Type="varchar" MaxLength="200" />
+          <Property Name="City" Type="varchar" MaxLength="30" />
+          <Property Name="PostalCode" Type="varchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="Object2DCode">
+          <Key>
+            <PropertyRef Name="Objec2DCodeIDPK" />
+          </Key>
+          <Property Name="Objec2DCodeIDPK" Type="int" Nullable="false" />
+          <Property Name="Object_id_FK" Type="int" />
+          <Property Name="C2DCodeID" Type="int" />
+          <Property Name="C2DCodeType" Type="int" />
+          <Property Name="C2DCodeContents" Type="varbinary(max)" />
+          <Property Name="IsInActive" Type="nchar" MaxLength="10" />
+          <Property Name="BlockID_FK" Type="uniqueidentifier" />
+        </EntityType>
+        <EntityType Name="ObjectEvent">
+          <Key>
+            <PropertyRef Name="EventID_PK" />
+          </Key>
+          <Property Name="EventID_PK" Type="int" Nullable="false" />
+          <Property Name="ObjectID_FK" Type="int" />
+        </EntityType>
+        <EntityType Name="ObjectPerson">
+          <Key>
+            <PropertyRef Name="PersonID_PK" />
+          </Key>
+          <Property Name="PersonID_PK" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ObjectID_FK" Type="int" />
+          <Property Name="Person_Name" Type="nvarchar" MaxLength="250" />
+          <Property Name="PersonType" Type="nvarchar" MaxLength="250" />
+          <Property Name="Description" Type="nvarchar" MaxLength="250" />
+          <Property Name="Gender" Type="nvarchar" MaxLength="50" />
+          <Property Name="Title" Type="nvarchar" MaxLength="250" />
+          <Property Name="Telephone" Type="nvarchar" MaxLength="50" />
+          <Property Name="Birthday" Type="datetime" />
+          <Property Name="Position" Type="nvarchar" MaxLength="250" />
+          <Property Name="Email" Type="nvarchar" MaxLength="250" />
+          <Property Name="AddID_FK" Type="int" />
+          <Property Name="C2DCodeType" Type="nvarchar" MaxLength="50" />
+          <Property Name="PersonDetailsUrl" Type="nvarchar" MaxLength="255" />
+          <Property Name="Created_Date" Type="datetime" />
+          <Property Name="Deleted_Date" Type="datetime" />
+        </EntityType>
+        <EntityType Name="ObjectProduction">
+          <Key>
+            <PropertyRef Name="Product_id" />
+          </Key>
+          <Property Name="Product_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ObjectID_FK" Type="int" Nullable="false" />
+          <Property Name="Product_name" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="Brand_id" Type="int" Nullable="false" />
+          <Property Name="Category_id" Type="int" Nullable="false" />
+          <Property Name="Model" Type="nvarchar" MaxLength="250" />
+          <Property Name="Model_year" Type="smallint" Nullable="false" />
+          <Property Name="List_price" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+          <Property Name="ItemUnit" Type="nvarchar" MaxLength="50" />
+          <Property Name="LocationID" Type="int" />
+          <Property Name="Manufacturer_vendor" Type="nvarchar" MaxLength="250" />
+          <Property Name="Manufacture_Date" Type="datetime" />
+          <Property Name="Shipped_From" Type="nvarchar" MaxLength="250" />
+          <Property Name="Shipped_To" Type="nvarchar" MaxLength="250" />
+          <Property Name="Shipped_Date" Type="datetime" />
+          <Property Name="OrganizationID_FK" Type="int" />
+          <Property Name="C2DMACode" Type="nvarchar" MaxLength="1024" />
+          <Property Name="QRCode" Type="binary" MaxLength="5000" />
+          <Property Name="ContentsURL" Type="nvarchar" MaxLength="500" />
+          <Property Name="PrivateKey" Type="binary" MaxLength="500" />
+          <Property Name="OpenToRole" Type="int" />
+          <Property Name="BlockID" Type="uniqueidentifier" />
+          <Property Name="NextChainID" Type="uniqueidentifier" />
+          <Property Name="CreatedDate_DT" Type="datetime" />
+          <Property Name="CreatedBy_NV" Type="nvarchar" MaxLength="250" />
+          <Property Name="DeleteDate_DT" Type="datetime" />
+          <Property Name="DeleteByName_NV" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="ObjectTbl">
+          <Key>
+            <PropertyRef Name="Object_id" />
+          </Key>
+          <Property Name="Object_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Object_name" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="Category_id" Type="int" Nullable="false" />
+          <Property Name="Model_year" Type="smallint" Nullable="false" />
+          <Property Name="OrganizationID_FK" Type="int" />
+          <Property Name="C2DMACode" Type="nvarchar" MaxLength="1024" />
+          <Property Name="QRCode" Type="varbinary(max)" />
+          <Property Name="ContentsURL" Type="nvarchar" MaxLength="500" />
+          <Property Name="PrivateKey" Type="binary" MaxLength="500" />
+          <Property Name="OpenToRole" Type="int" />
+          <Property Name="BlockID" Type="uniqueidentifier" />
+          <Property Name="NextChainID" Type="uniqueidentifier" />
+          <Property Name="CreatedDate_DT" Type="datetime" />
+          <Property Name="CreatedBy_NV" Type="nvarchar" MaxLength="250" />
+          <Property Name="DeleteDate_DT" Type="datetime" />
+          <Property Name="DeleteByName_NV" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="Orders">
+          <Key>
+            <PropertyRef Name="OrderID" />
+          </Key>
+          <Property Name="OrderID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CustomerID" Type="int" Nullable="false" />
+          <Property Name="OrderDate" Type="datetime" Nullable="false" />
+          <Property Name="ShippedDate" Type="datetime" Nullable="false" />
+          <Property Name="ShipName" Type="varchar" MaxLength="100" />
+          <Property Name="ShipAddress" Type="varchar" MaxLength="300" />
+          <Property Name="ShipPostalCode" Type="varchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="Organization">
+          <Key>
+            <PropertyRef Name="OrganizationID_PK" />
+          </Key>
+          <Property Name="OrganizationID_PK" Type="int" Nullable="false" />
+          <Property Name="OrganizationName" Type="nvarchar" MaxLength="250" />
+          <Property Name="OrganizationAddCode" Type="int" />
+          <Property Name="UserOrganizationID" Type="int" />
+          <Property Name="Note" Type="nvarchar" MaxLength="50" />
+          <Property Name="AdminCode" Type="int" />
+          <Property Name="CreateDate_DT" Type="datetime" />
+          <Property Name="CreatedBy_NV" Type="nvarchar" MaxLength="250" />
+          <Property Name="DeleteDate_DT" Type="datetime" />
+          <Property Name="DeletedBy_NV" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="Production_Categories">
+          <Key>
+            <PropertyRef Name="Category_id" />
+          </Key>
+          <Property Name="Category_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Category_name" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="AdminLevel" Type="int" />
+          <Property Name="IsInActive" Type="bit" />
+        </EntityType>
+        <EntityType Name="Roles">
+          <Key>
+            <PropertyRef Name="RoleID_PK" />
+          </Key>
+          <Property Name="RoleID_PK" Type="int" Nullable="false" />
+          <Property Name="RoleName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Comment" Type="nvarchar" MaxLength="250" />
+          <Property Name="IsInactive" Type="bit" />
+        </EntityType>
+        <EntityType Name="State">
+          <Key>
+            <PropertyRef Name="StateID" />
+          </Key>
+          <Property Name="StateID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="StateName" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="CountryID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="UploadedFiles">
+          <Key>
+            <PropertyRef Name="FileID" />
+          </Key>
+          <Property Name="FileID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FileName" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Description" Type="varchar" MaxLength="300" />
+          <Property Name="FilePath" Type="varchar" MaxLength="300" Nullable="false" />
+          <Property Name="FileSize" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="User_Roles">
+          <Key>
+            <PropertyRef Name="UserRoleID_PK" />
+          </Key>
+          <Property Name="UserRoleID_PK" Type="int" Nullable="false" />
+          <Property Name="UserID_FK" Type="int" Nullable="false" />
+          <Property Name="RoleID_FK" Type="int" Nullable="false" />
+          <Property Name="Created_DT" Type="datetime" />
+          <Property Name="CreatedBy_NV" Type="nvarchar" MaxLength="250" />
+          <Property Name="Delete_DT" Type="datetime" />
+          <Property Name="DeleteBy_NV" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Username" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Password" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="PasswordHash" Type="binary" MaxLength="128" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="250" />
+          <Property Name="LastName" Type="nchar" MaxLength="10" />
+          <Property Name="FullName_CN" Type="varchar" MaxLength="100" />
+          <Property Name="UserIsComfirmed" Type="bit" />
+          <Property Name="EmailID" Type="varchar" MaxLength="200" />
+          <Property Name="Gender" Type="varchar" MaxLength="10" />
+          <Property Name="OrganizationID_FK" Type="int" />
+          <Property Name="CreateDate_DT" Type="datetime" />
+          <Property Name="CreatedBy_NV" Type="nvarchar" MaxLength="250" />
+          <Property Name="DeleteDate_DT" Type="datetime" />
+          <Property Name="DeleteBy_NV" Type="nvarchar" MaxLength="250" />
+          <Property Name="ExpiredDate_DT" Type="datetime" />
+        </EntityType>
+        <Association Name="FK_Customers_Address">
+          <End Role="Addresses" Type="Self.Addresses" Multiplicity="0..1" />
+          <End Role="Customers" Type="Self.Customers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Addresses">
+              <PropertyRef Name="AddID_PK" />
+            </Principal>
+            <Dependent Role="Customers">
+              <PropertyRef Name="AddID_FK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Canada2DCodeModelStoreContainer">
+          <EntitySet Name="Addresses" EntityType="Self.Addresses" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Contacts" EntityType="Self.Contacts" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Country" EntityType="Self.Country" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CustomerEmail" EntityType="Self.CustomerEmail" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CustomerPhone" EntityType="Self.CustomerPhone" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Customers" EntityType="Self.Customers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Employees" EntityType="Self.Employees" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Object2DCode" EntityType="Self.Object2DCode" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ObjectEvent" EntityType="Self.ObjectEvent" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ObjectPerson" EntityType="Self.ObjectPerson" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ObjectProduction" EntityType="Self.ObjectProduction" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ObjectTbl" EntityType="Self.ObjectTbl" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Orders" EntityType="Self.Orders" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Organization" EntityType="Self.Organization" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Production_Categories" EntityType="Self.Production_Categories" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Roles" EntityType="Self.Roles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="State" EntityType="Self.State" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UploadedFiles" EntityType="Self.UploadedFiles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="User_Roles" EntityType="Self.User_Roles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Customers_Address" Association="Self.FK_Customers_Address">
+            <End Role="Addresses" EntitySet="Addresses" />
+            <End Role="Customers" EntitySet="Customers" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Canada2DCodeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Customers">
+          <Key>
+            <PropertyRef Name="CustomerId" />
+          </Key>
+          <Property Name="CustomerId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="PasswordKey" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Conditions_BT" Type="Boolean" />
+          <Property Name="Url" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="AddID_FK" Type="Int32" />
+          <Property Name="Telephone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Addresses" Relationship="Canada2DCodeModel.FK_Customers_Address" FromRole="Customers" ToRole="Addresses" />
+        </EntityType>
+        <EntityContainer Name="Canada2DCodeEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Customers" EntityType="Self.Customers" />
+          <EntitySet Name="Contacts" EntityType="Canada2DCodeModel.Contacts" />
+          <EntitySet Name="Country" EntityType="Canada2DCodeModel.Country" />
+          <EntitySet Name="Employees" EntityType="Canada2DCodeModel.Employees" />
+          <EntitySet Name="Orders" EntityType="Canada2DCodeModel.Orders" />
+          <EntitySet Name="State" EntityType="Canada2DCodeModel.State" />
+          <EntitySet Name="sysdiagrams" EntityType="Canada2DCodeModel.sysdiagrams" />
+          <EntitySet Name="UploadedFiles" EntityType="Canada2DCodeModel.UploadedFiles" />
+          <EntitySet Name="Users" EntityType="Canada2DCodeModel.Users" />
+          <EntitySet Name="Addresses" EntityType="Canada2DCodeModel.Addresses" />
+          <EntitySet Name="CustomerEmail" EntityType="Canada2DCodeModel.CustomerEmail" />
+          <EntitySet Name="CustomerPhone" EntityType="Canada2DCodeModel.CustomerPhone" />
+          <EntitySet Name="Object2DCode" EntityType="Canada2DCodeModel.Object2DCode" />
+          <EntitySet Name="Organization" EntityType="Canada2DCodeModel.Organization" />
+          <EntitySet Name="Production_Categories" EntityType="Canada2DCodeModel.Production_Categories" />
+          <EntitySet Name="Roles" EntityType="Canada2DCodeModel.Roles" />
+          <EntitySet Name="User_Roles" EntityType="Canada2DCodeModel.User_Roles" />
+          <AssociationSet Name="FK_Customers_Address" Association="Canada2DCodeModel.FK_Customers_Address">
+            <End Role="Addresses" EntitySet="Addresses" />
+            <End Role="Customers" EntitySet="Customers" />
+          </AssociationSet>
+          <EntitySet Name="ObjectEvent" EntityType="Canada2DCodeModel.ObjectEvent" />
+          <EntitySet Name="ObjectPerson" EntityType="Canada2DCodeModel.ObjectPerson" />
+          <EntitySet Name="ObjectProduction" EntityType="Canada2DCodeModel.ObjectProduction" />
+          <EntitySet Name="ObjectTbl" EntityType="Canada2DCodeModel.ObjectTbl" />
+        </EntityContainer>
+        <EntityType Name="Contacts">
+          <Key>
+            <PropertyRef Name="ContactID" />
+          </Key>
+          <Property Name="ContactID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="LastName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ContactNo1" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="ContactNo2" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="EmailID" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Address" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Country">
+          <Key>
+            <PropertyRef Name="CountryID" />
+          </Key>
+          <Property Name="CountryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CountryName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CountryCode2D" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="CountryCode3D" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="CountryNameCN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Employees">
+          <Key>
+            <PropertyRef Name="EmployeeID" />
+          </Key>
+          <Property Name="EmployeeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LastName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="HireDate" Type="DateTime" Precision="3" />
+          <Property Name="Address" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="City" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="PostalCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Orders">
+          <Key>
+            <PropertyRef Name="OrderID" />
+          </Key>
+          <Property Name="OrderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CustomerID" Type="Int32" Nullable="false" />
+          <Property Name="OrderDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ShippedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ShipName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ShipAddress" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="ShipPostalCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="State">
+          <Key>
+            <PropertyRef Name="StateID" />
+          </Key>
+          <Property Name="StateID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="StateName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CountryID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="UploadedFiles">
+          <Key>
+            <PropertyRef Name="FileID" />
+          </Key>
+          <Property Name="FileID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FileName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Description" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="FilePath" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="FileSize" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Username" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="EmailID" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Gender" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="PasswordHash" Type="Binary" Nullable="false" MaxLength="128" FixedLength="true" />
+          <Property Name="FirstName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="FullName_CN" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="UserIsComfirmed" Type="Boolean" />
+          <Property Name="OrganizationID_FK" Type="Int32" />
+          <Property Name="CreateDate_DT" Type="DateTime" Precision="3" />
+          <Property Name="CreatedBy_NV" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="DeleteDate_DT" Type="DateTime" Precision="3" />
+          <Property Name="DeleteBy_NV" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="ExpiredDate_DT" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="Addresses">
+          <Key>
+            <PropertyRef Name="AddID_PK" />
+          </Key>
+          <Property Name="AddID_PK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Address1" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Address2" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Address3" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="City" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="State" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Country" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="PostalCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IsInActive" Type="Boolean" />
+          <Property Name="Note" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="OrganizationID_FK" Type="Int32" />
+          <NavigationProperty Name="Customers" Relationship="Canada2DCodeModel.FK_Customers_Address" FromRole="Addresses" ToRole="Customers" />
+        </EntityType>
+        <EntityType Name="CustomerEmail">
+          <Key>
+            <PropertyRef Name="CustomerEmailID" />
+          </Key>
+          <Property Name="CustomerEmailID" Type="Int32" Nullable="false" />
+          <Property Name="CustomerEmail1" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="CustomeID" Type="Int32" />
+          <Property Name="IsinActive" Type="Boolean" />
+          <Property Name="QueueCode" Type="Int32" />
+        </EntityType>
+        <EntityType Name="CustomerPhone">
+          <Key>
+            <PropertyRef Name="CustomerPhoneID" />
+          </Key>
+          <Property Name="CustomerPhoneID" Type="Int32" Nullable="false" />
+          <Property Name="CustomerPhone1" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="CustomeID" Type="Int32" />
+          <Property Name="IsinActive" Type="Boolean" />
+          <Property Name="QueueCode" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Object2DCode">
+          <Key>
+            <PropertyRef Name="Objec2DCodeIDPK" />
+          </Key>
+          <Property Name="Objec2DCodeIDPK" Type="Int32" Nullable="false" />
+          <Property Name="Object_id_FK" Type="Int32" />
+          <Property Name="C2DCodeID" Type="Int32" />
+          <Property Name="C2DCodeType" Type="Int32" />
+          <Property Name="C2DCodeContents" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="IsInActive" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="BlockID_FK" Type="Guid" />
+        </EntityType>
+        <EntityType Name="Organization">
+          <Key>
+            <PropertyRef Name="OrganizationID_PK" />
+          </Key>
+          <Property Name="OrganizationID_PK" Type="Int32" Nullable="false" />
+          <Property Name="OrganizationName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="OrganizationAddCode" Type="Int32" />
+          <Property Name="UserOrganizationID" Type="Int32" />
+          <Property Name="Note" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AdminCode" Type="Int32" />
+          <Property Name="CreateDate_DT" Type="DateTime" Precision="3" />
+          <Property Name="CreatedBy_NV" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="DeleteDate_DT" Type="DateTime" Precision="3" />
+          <Property Name="DeletedBy_NV" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Production_Categories">
+          <Key>
+            <PropertyRef Name="Category_id" />
+          </Key>
+          <Property Name="Category_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Category_name" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="AdminLevel" Type="Int32" />
+          <Property Name="IsInActive" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="Roles">
+          <Key>
+            <PropertyRef Name="RoleID_PK" />
+          </Key>
+          <Property Name="RoleID_PK" Type="Int32" Nullable="false" />
+          <Property Name="RoleName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Comment" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="IsInactive" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="User_Roles">
+          <Key>
+            <PropertyRef Name="UserRoleID_PK" />
+          </Key>
+          <Property Name="UserRoleID_PK" Type="Int32" Nullable="false" />
+          <Property Name="UserID_FK" Type="Int32" Nullable="false" />
+          <Property Name="RoleID_FK" Type="Int32" Nullable="false" />
+          <Property Name="Created_DT" Type="DateTime" Precision="3" />
+          <Property Name="CreatedBy_NV" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Delete_DT" Type="DateTime" Precision="3" />
+          <Property Name="DeleteBy_NV" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <Association Name="FK_Customers_Address">
+          <End Type="Canada2DCodeModel.Addresses" Role="Addresses" Multiplicity="0..1" />
+          <End Type="Canada2DCodeModel.Customers" Role="Customers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Addresses">
+              <PropertyRef Name="AddID_PK" />
+            </Principal>
+            <Dependent Role="Customers">
+              <PropertyRef Name="AddID_FK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="ObjectEvent">
+          <Key>
+            <PropertyRef Name="EventID_PK" />
+          </Key>
+          <Property Name="EventID_PK" Type="Int32" Nullable="false" />
+          <Property Name="ObjectID_FK" Type="Int32" />
+        </EntityType>
+        <EntityType Name="ObjectPerson">
+          <Key>
+            <PropertyRef Name="PersonID_PK" />
+          </Key>
+          <Property Name="PersonID_PK" Type="Int32" Nullable="false" />
+          <Property Name="ObjectID_FK" Type="Int32" />
+          <Property Name="Person_Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="PersonType" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Gender" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Title" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Telephone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Birthday" Type="DateTime" Precision="3" />
+          <Property Name="Position" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="AddID_FK" Type="Int32" />
+          <Property Name="C2DCodeType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Created_Date" Type="DateTime" Precision="3" />
+          <Property Name="Deleted_Date" Type="DateTime" Precision="3" />
+          <Property Name="PersonDetailsUrl" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ObjectProduction">
+          <Key>
+            <PropertyRef Name="Product_id" />
+          </Key>
+          <Property Name="Product_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ObjectID_FK" Type="Int32" Nullable="false" />
+          <Property Name="Product_name" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Brand_id" Type="Int32" Nullable="false" />
+          <Property Name="Category_id" Type="Int32" Nullable="false" />
+          <Property Name="Model" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Model_year" Type="Int16" Nullable="false" />
+          <Property Name="List_price" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+          <Property Name="ItemUnit" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LocationID" Type="Int32" />
+          <Property Name="Manufacturer_vendor" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Manufacture_Date" Type="DateTime" Precision="3" />
+          <Property Name="Shipped_From" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Shipped_To" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Shipped_Date" Type="DateTime" Precision="3" />
+          <Property Name="OrganizationID_FK" Type="Int32" />
+          <Property Name="C2DMACode" Type="String" MaxLength="1024" FixedLength="false" Unicode="true" />
+          <Property Name="QRCode" Type="Binary" MaxLength="5000" FixedLength="true" />
+          <Property Name="ContentsURL" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="PrivateKey" Type="Binary" MaxLength="500" FixedLength="true" />
+          <Property Name="OpenToRole" Type="Int32" />
+          <Property Name="BlockID" Type="Guid" />
+          <Property Name="NextChainID" Type="Guid" />
+          <Property Name="CreatedDate_DT" Type="DateTime" Precision="3" />
+          <Property Name="CreatedBy_NV" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="DeleteDate_DT" Type="DateTime" Precision="3" />
+          <Property Name="DeleteByName_NV" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ObjectTbl">
+          <Key>
+            <PropertyRef Name="Object_id" />
+          </Key>
+          <Property Name="Object_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Object_name" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Category_id" Type="Int32" Nullable="false" />
+          <Property Name="Model_year" Type="Int16" Nullable="false" />
+          <Property Name="OrganizationID_FK" Type="Int32" />
+          <Property Name="C2DMACode" Type="String" MaxLength="1024" FixedLength="false" Unicode="true" />
+          <Property Name="QRCode" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="ContentsURL" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="PrivateKey" Type="Binary" MaxLength="500" FixedLength="true" />
+          <Property Name="OpenToRole" Type="Int32" />
+          <Property Name="BlockID" Type="Guid" />
+          <Property Name="NextChainID" Type="Guid" />
+          <Property Name="CreatedDate_DT" Type="DateTime" Precision="3" />
+          <Property Name="CreatedBy_NV" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="DeleteDate_DT" Type="DateTime" Precision="3" />
+          <Property Name="DeleteByName_NV" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Canada2DCodeModelStoreContainer" CdmEntityContainer="Canada2DCodeEntities">
+          <EntitySetMapping Name="Customers">
+            <EntityTypeMapping TypeName="Canada2DCodeModel.Customers">
+              <MappingFragment StoreEntitySet="Customers">
+                <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+                <ScalarProperty Name="AddID_FK" ColumnName="AddID_FK" />
+                <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="PasswordKey" ColumnName="PasswordKey" />
+                <ScalarProperty Name="Conditions_BT" ColumnName="Conditions_BT" />
+                <ScalarProperty Name="Url" ColumnName="Url" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Contacts">
+            <EntityTypeMapping TypeName="Canada2DCodeModel.Contacts">
+              <MappingFragment StoreEntitySet="Contacts">
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+                <ScalarProperty Name="ContactNo2" ColumnName="ContactNo2" />
+                <ScalarProperty Name="ContactNo1" ColumnName="ContactNo1" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="ContactID" ColumnName="ContactID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Country">
+            <EntityTypeMapping TypeName="Canada2DCodeModel.Country">
+              <MappingFragment StoreEntitySet="Country">
+                <ScalarProperty Name="CountryNameCN" ColumnName="CountryNameCN" />
+                <ScalarProperty Name="CountryCode3D" ColumnName="CountryCode3D" />
+                <ScalarProperty Name="CountryCode2D" ColumnName="CountryCode2D" />
+                <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+                <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Employees">
+            <EntityTypeMapping TypeName="Canada2DCodeModel.Employees">
+              <MappingFragment StoreEntitySet="Employees">
+                <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="HireDate" ColumnName="HireDate" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Orders">
+            <EntityTypeMapping TypeName="Canada2DCodeModel.Orders">
+              <MappingFragment StoreEntitySet="Orders">
+                <ScalarProperty Name="ShipPostalCode" ColumnName="ShipPostalCode" />
+                <ScalarProperty Name="ShipAddress" ColumnName="ShipAddress" />
+                <ScalarProperty Name="ShipName" ColumnName="ShipName" />
+                <ScalarProperty Name="ShippedDate" ColumnName="ShippedDate" />
+                <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+                <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+                <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="State">
+            <EntityTypeMapping TypeName="Canada2DCodeModel.State">
+              <MappingFragment StoreEntitySet="State">
+                <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+                <ScalarProperty Name="StateName" ColumnName="StateName" />
+                <ScalarProperty Name="StateID" ColumnName="StateID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="Canada2DCodeModel.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="definition" ColumnName="definition" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UploadedFiles">
+            <EntityTypeMapping TypeName="Canada2DCodeModel.UploadedFiles">
+              <MappingFragment StoreEntitySet="UploadedFiles">
+                <ScalarProperty Name="FileSize" ColumnName="FileSize" />
+                <ScalarProperty Name="FilePath" ColumnName="FilePath" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="FileName" ColumnName="FileName" />
+                <ScalarProperty Name="FileID" ColumnName="FileID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="Canada2DCodeModel.Users">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="ExpiredDate_DT" ColumnName="ExpiredDate_DT" />
+                <ScalarProperty Name="DeleteBy_NV" ColumnName="DeleteBy_NV" />
+                <ScalarProperty Name="DeleteDate_DT" ColumnName="DeleteDate_DT" />
+                <ScalarProperty Name="CreatedBy_NV" ColumnName="CreatedBy_NV" />
+                <ScalarProperty Name="CreateDate_DT" ColumnName="CreateDate_DT" />
+                <ScalarProperty Name="OrganizationID_FK" ColumnName="OrganizationID_FK" />
+                <ScalarProperty Name="UserIsComfirmed" ColumnName="UserIsComfirmed" />
+                <ScalarProperty Name="FullName_CN" ColumnName="FullName_CN" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Addresses">
+            <EntityTypeMapping TypeName="Canada2DCodeModel.Addresses">
+              <MappingFragment StoreEntitySet="Addresses">
+                <ScalarProperty Name="OrganizationID_FK" ColumnName="OrganizationID_FK" />
+                <ScalarProperty Name="Note" ColumnName="Note" />
+                <ScalarProperty Name="IsInActive" ColumnName="IsInActive" />
+                <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Address3" ColumnName="Address3" />
+                <ScalarProperty Name="Address2" ColumnName="Address2" />
+                <ScalarProperty Name="Address1" ColumnName="Address1" />
+                <ScalarProperty Name="AddID_PK" ColumnName="AddID_PK" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CustomerEmail">
+            <EntityTypeMapping TypeName="Canada2DCodeModel.CustomerEmail">
+              <MappingFragment StoreEntitySet="CustomerEmail">
+                <ScalarProperty Name="QueueCode" ColumnName="QueueCode" />
+                <ScalarProperty Name="IsinActive" ColumnName="IsinActive" />
+                <ScalarProperty Name="CustomeID" ColumnName="CustomeID" />
+                <ScalarProperty Name="CustomerEmail1" ColumnName="CustomerEmail" />
+                <ScalarProperty Name="CustomerEmailID" ColumnName="CustomerEmailID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CustomerPhone">
+            <EntityTypeMapping TypeName="Canada2DCodeModel.CustomerPhone">
+              <MappingFragment StoreEntitySet="CustomerPhone">
+                <ScalarProperty Name="QueueCode" ColumnName="QueueCode" />
+                <ScalarProperty Name="IsinActive" ColumnName="IsinActive" />
+                <ScalarProperty Name="CustomeID" ColumnName="CustomeID" />
+                <ScalarProperty Name="CustomerPhone1" ColumnName="CustomerPhone" />
+                <ScalarProperty Name="CustomerPhoneID" ColumnName="CustomerPhoneID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Object2DCode">
+            <EntityTypeMapping TypeName="Canada2DCodeModel.Object2DCode">
+              <MappingFragment StoreEntitySet="Object2DCode">
+                <ScalarProperty Name="BlockID_FK" ColumnName="BlockID_FK" />
+                <ScalarProperty Name="IsInActive" ColumnName="IsInActive" />
+                <ScalarProperty Name="C2DCodeContents" ColumnName="C2DCodeContents" />
+                <ScalarProperty Name="C2DCodeType" ColumnName="C2DCodeType" />
+                <ScalarProperty Name="C2DCodeID" ColumnName="C2DCodeID" />
+                <ScalarProperty Name="Object_id_FK" ColumnName="Object_id_FK" />
+                <ScalarProperty Name="Objec2DCodeIDPK" ColumnName="Objec2DCodeIDPK" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Organization">
+            <EntityTypeMapping TypeName="Canada2DCodeModel.Organization">
+              <MappingFragment StoreEntitySet="Organization">
+                <ScalarProperty Name="DeletedBy_NV" ColumnName="DeletedBy_NV" />
+                <ScalarProperty Name="DeleteDate_DT" ColumnName="DeleteDate_DT" />
+                <ScalarProperty Name="CreatedBy_NV" ColumnName="CreatedBy_NV" />
+                <ScalarProperty Name="CreateDate_DT" ColumnName="CreateDate_DT" />
+                <ScalarProperty Name="AdminCode" ColumnName="AdminCode" />
+                <ScalarProperty Name="Note" ColumnName="Note" />
+                <ScalarProperty Name="UserOrganizationID" ColumnName="UserOrganizationID" />
+                <ScalarProperty Name="OrganizationAddCode" ColumnName="OrganizationAddCode" />
+                <ScalarProperty Name="OrganizationName" ColumnName="OrganizationName" />
+                <ScalarProperty Name="OrganizationID_PK" ColumnName="OrganizationID_PK" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Production_Categories">
+            <EntityTypeMapping TypeName="Canada2DCodeModel.Production_Categories">
+              <MappingFragment StoreEntitySet="Production_Categories">
+                <ScalarProperty Name="IsInActive" ColumnName="IsInActive" />
+                <ScalarProperty Name="AdminLevel" ColumnName="AdminLevel" />
+                <ScalarProperty Name="Category_name" ColumnName="Category_name" />
+                <ScalarProperty Name="Category_id" ColumnName="Category_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Roles">
+            <EntityTypeMapping TypeName="Canada2DCodeModel.Roles">
+              <MappingFragment StoreEntitySet="Roles">
+                <ScalarProperty Name="IsInactive" ColumnName="IsInactive" />
+                <ScalarProperty Name="Comment" ColumnName="Comment" />
+                <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+                <ScalarProperty Name="RoleID_PK" ColumnName="RoleID_PK" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="User_Roles">
+            <EntityTypeMapping TypeName="Canada2DCodeModel.User_Roles">
+              <MappingFragment StoreEntitySet="User_Roles">
+                <ScalarProperty Name="DeleteBy_NV" ColumnName="DeleteBy_NV" />
+                <ScalarProperty Name="Delete_DT" ColumnName="Delete_DT" />
+                <ScalarProperty Name="CreatedBy_NV" ColumnName="CreatedBy_NV" />
+                <ScalarProperty Name="Created_DT" ColumnName="Created_DT" />
+                <ScalarProperty Name="RoleID_FK" ColumnName="RoleID_FK" />
+                <ScalarProperty Name="UserID_FK" ColumnName="UserID_FK" />
+                <ScalarProperty Name="UserRoleID_PK" ColumnName="UserRoleID_PK" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ObjectEvent">
+            <EntityTypeMapping TypeName="Canada2DCodeModel.ObjectEvent">
+              <MappingFragment StoreEntitySet="ObjectEvent">
+                <ScalarProperty Name="ObjectID_FK" ColumnName="ObjectID_FK" />
+                <ScalarProperty Name="EventID_PK" ColumnName="EventID_PK" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ObjectPerson">
+            <EntityTypeMapping TypeName="Canada2DCodeModel.ObjectPerson">
+              <MappingFragment StoreEntitySet="ObjectPerson">
+                <ScalarProperty Name="PersonDetailsUrl" ColumnName="PersonDetailsUrl" />
+                <ScalarProperty Name="Deleted_Date" ColumnName="Deleted_Date" />
+                <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+                <ScalarProperty Name="C2DCodeType" ColumnName="C2DCodeType" />
+                <ScalarProperty Name="AddID_FK" ColumnName="AddID_FK" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Position" ColumnName="Position" />
+                <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+                <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="PersonType" ColumnName="PersonType" />
+                <ScalarProperty Name="Person_Name" ColumnName="Person_Name" />
+                <ScalarProperty Name="ObjectID_FK" ColumnName="ObjectID_FK" />
+                <ScalarProperty Name="PersonID_PK" ColumnName="PersonID_PK" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ObjectProduction">
+            <EntityTypeMapping TypeName="Canada2DCodeModel.ObjectProduction">
+              <MappingFragment StoreEntitySet="ObjectProduction">
+                <ScalarProperty Name="DeleteByName_NV" ColumnName="DeleteByName_NV" />
+                <ScalarProperty Name="DeleteDate_DT" ColumnName="DeleteDate_DT" />
+                <ScalarProperty Name="CreatedBy_NV" ColumnName="CreatedBy_NV" />
+                <ScalarProperty Name="CreatedDate_DT" ColumnName="CreatedDate_DT" />
+                <ScalarProperty Name="NextChainID" ColumnName="NextChainID" />
+                <ScalarProperty Name="BlockID" ColumnName="BlockID" />
+                <ScalarProperty Name="OpenToRole" ColumnName="OpenToRole" />
+                <ScalarProperty Name="PrivateKey" ColumnName="PrivateKey" />
+                <ScalarProperty Name="ContentsURL" ColumnName="ContentsURL" />
+                <ScalarProperty Name="QRCode" ColumnName="QRCode" />
+                <ScalarProperty Name="C2DMACode" ColumnName="C2DMACode" />
+                <ScalarProperty Name="OrganizationID_FK" ColumnName="OrganizationID_FK" />
+                <ScalarProperty Name="Shipped_Date" ColumnName="Shipped_Date" />
+                <ScalarProperty Name="Shipped_To" ColumnName="Shipped_To" />
+                <ScalarProperty Name="Shipped_From" ColumnName="Shipped_From" />
+                <ScalarProperty Name="Manufacture_Date" ColumnName="Manufacture_Date" />
+                <ScalarProperty Name="Manufacturer_vendor" ColumnName="Manufacturer_vendor" />
+                <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+                <ScalarProperty Name="ItemUnit" ColumnName="ItemUnit" />
+                <ScalarProperty Name="List_price" ColumnName="List_price" />
+                <ScalarProperty Name="Model_year" ColumnName="Model_year" />
+                <ScalarProperty Name="Model" ColumnName="Model" />
+                <ScalarProperty Name="Category_id" ColumnName="Category_id" />
+                <ScalarProperty Name="Brand_id" ColumnName="Brand_id" />
+                <ScalarProperty Name="Product_name" ColumnName="Product_name" />
+                <ScalarProperty Name="ObjectID_FK" ColumnName="ObjectID_FK" />
+                <ScalarProperty Name="Product_id" ColumnName="Product_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ObjectTbl">
+            <EntityTypeMapping TypeName="Canada2DCodeModel.ObjectTbl">
+              <MappingFragment StoreEntitySet="ObjectTbl">
+                <ScalarProperty Name="DeleteByName_NV" ColumnName="DeleteByName_NV" />
+                <ScalarProperty Name="DeleteDate_DT" ColumnName="DeleteDate_DT" />
+                <ScalarProperty Name="CreatedBy_NV" ColumnName="CreatedBy_NV" />
+                <ScalarProperty Name="CreatedDate_DT" ColumnName="CreatedDate_DT" />
+                <ScalarProperty Name="NextChainID" ColumnName="NextChainID" />
+                <ScalarProperty Name="BlockID" ColumnName="BlockID" />
+                <ScalarProperty Name="OpenToRole" ColumnName="OpenToRole" />
+                <ScalarProperty Name="PrivateKey" ColumnName="PrivateKey" />
+                <ScalarProperty Name="ContentsURL" ColumnName="ContentsURL" />
+                <ScalarProperty Name="QRCode" ColumnName="QRCode" />
+                <ScalarProperty Name="C2DMACode" ColumnName="C2DMACode" />
+                <ScalarProperty Name="OrganizationID_FK" ColumnName="OrganizationID_FK" />
+                <ScalarProperty Name="Model_year" ColumnName="Model_year" />
+                <ScalarProperty Name="Category_id" ColumnName="Category_id" />
+                <ScalarProperty Name="Object_name" ColumnName="Object_name" />
+                <ScalarProperty Name="Object_id" ColumnName="Object_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

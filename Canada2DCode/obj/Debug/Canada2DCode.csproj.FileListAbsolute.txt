@@ -1,0 +1,211 @@
+C:\zuse\Jobs2018\Canada2DCode\Canada2DCode\bin\Canada2DCode.dll.config
+C:\zuse\Jobs2018\Canada2DCode\Canada2DCode\bin\Canada2DCode.dll
+C:\zuse\Jobs2018\Canada2DCode\Canada2DCode\bin\Canada2DCode.pdb
+C:\zuse\Jobs2018\Canada2DCode\Canada2DCode\bin\Antlr3.Runtime.dll
+C:\zuse\Jobs2018\Canada2DCode\Canada2DCode\bin\EntityFramework.dll
+C:\zuse\Jobs2018\Canada2DCode\Canada2DCode\bin\EntityFramework.SqlServer.dll
+C:\zuse\Jobs2018\Canada2DCode\Canada2DCode\bin\Microsoft.AspNet.Identity.Core.dll
+C:\zuse\Jobs2018\Canada2DCode\Canada2DCode\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\zuse\Jobs2018\Canada2DCode\Canada2DCode\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\zuse\Jobs2018\Canada2DCode\Canada2DCode\bin\Microsoft.Owin.Cors.dll
+C:\zuse\Jobs2018\Canada2DCode\Canada2DCode\bin\Microsoft.Owin.dll
+C:\zuse\Jobs2018\Canada2DCode\Canada2DCode\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\zuse\Jobs2018\Canada2DCode\Canada2DCode\bin\Microsoft.Owin.Security.Cookies.dll
+C:\zuse\Jobs2018\Canada2DCode\Canada2DCode\bin\Microsoft.Owin.Security.dll
+C:\zuse\Jobs2018\Canada2DCode\Canada2DCode\bin\Microsoft.Owin.Security.OAuth.dll
+C:\zuse\Jobs2018\Canada2DCode\Canada2DCode\bin\Microsoft.Web.Infrastructure.dll
+C:\zuse\Jobs2018\Canada2DCode\Canada2DCode\bin\Newtonsoft.Json.dll
+C:\zuse\Jobs2018\Canada2DCode\Canada2DCode\bin\Owin.dll
+C:\zuse\Jobs2018\Canada2DCode\Canada2DCode\bin\System.Net.Http.Formatting.dll
+C:\zuse\Jobs2018\Canada2DCode\Canada2DCode\bin\System.Web.Cors.dll
+C:\zuse\Jobs2018\Canada2DCode\Canada2DCode\bin\System.Web.Helpers.dll
+C:\zuse\Jobs2018\Canada2DCode\Canada2DCode\bin\System.Web.Http.Cors.dll
+C:\zuse\Jobs2018\Canada2DCode\Canada2DCode\bin\System.Web.Http.dll
+C:\zuse\Jobs2018\Canada2DCode\Canada2DCode\bin\System.Web.Http.Owin.dll
+C:\zuse\Jobs2018\Canada2DCode\Canada2DCode\bin\System.Web.Http.WebHost.dll
+C:\zuse\Jobs2018\Canada2DCode\Canada2DCode\bin\System.Web.Mvc.dll
+C:\zuse\Jobs2018\Canada2DCode\Canada2DCode\bin\System.Web.Optimization.dll
+C:\zuse\Jobs2018\Canada2DCode\Canada2DCode\bin\System.Web.Providers.dll
+C:\zuse\Jobs2018\Canada2DCode\Canada2DCode\bin\System.Web.Razor.dll
+C:\zuse\Jobs2018\Canada2DCode\Canada2DCode\bin\System.Web.WebPages.Deployment.dll
+C:\zuse\Jobs2018\Canada2DCode\Canada2DCode\bin\System.Web.WebPages.dll
+C:\zuse\Jobs2018\Canada2DCode\Canada2DCode\bin\System.Web.WebPages.Razor.dll
+C:\zuse\Jobs2018\Canada2DCode\Canada2DCode\bin\WebGrease.dll
+C:\zuse\Jobs2018\Canada2DCode\Canada2DCode\bin\zxing.dll
+C:\zuse\Jobs2018\Canada2DCode\Canada2DCode\bin\ZXing.Net.Mobile.Forms.dll
+C:\zuse\Jobs2018\Canada2DCode\Canada2DCode\bin\zxing.presentation.dll
+C:\zuse\Jobs2018\Canada2DCode\Canada2DCode\bin\Antlr3.Runtime.pdb
+C:\zuse\Jobs2018\Canada2DCode\Canada2DCode\bin\EntityFramework.xml
+C:\zuse\Jobs2018\Canada2DCode\Canada2DCode\bin\EntityFramework.SqlServer.xml
+C:\zuse\Jobs2018\Canada2DCode\Canada2DCode\bin\Microsoft.AspNet.Identity.Core.xml
+C:\zuse\Jobs2018\Canada2DCode\Canada2DCode\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\zuse\Jobs2018\Canada2DCode\Canada2DCode\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\zuse\Jobs2018\Canada2DCode\Canada2DCode\bin\Microsoft.Owin.xml
+C:\zuse\Jobs2018\Canada2DCode\Canada2DCode\bin\Microsoft.Owin.Cors.xml
+C:\zuse\Jobs2018\Canada2DCode\Canada2DCode\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\zuse\Jobs2018\Canada2DCode\Canada2DCode\bin\Microsoft.Owin.Security.xml
+C:\zuse\Jobs2018\Canada2DCode\Canada2DCode\bin\Microsoft.Owin.Security.Cookies.xml
+C:\zuse\Jobs2018\Canada2DCode\Canada2DCode\bin\Microsoft.Owin.Security.OAuth.xml
+C:\zuse\Jobs2018\Canada2DCode\Canada2DCode\bin\Newtonsoft.Json.xml
+C:\zuse\Jobs2018\Canada2DCode\Canada2DCode\bin\System.Net.Http.Formatting.xml
+C:\zuse\Jobs2018\Canada2DCode\Canada2DCode\bin\System.Web.Helpers.xml
+C:\zuse\Jobs2018\Canada2DCode\Canada2DCode\bin\System.Web.Http.xml
+C:\zuse\Jobs2018\Canada2DCode\Canada2DCode\bin\System.Web.Http.Cors.xml
+C:\zuse\Jobs2018\Canada2DCode\Canada2DCode\bin\System.Web.Http.Owin.xml
+C:\zuse\Jobs2018\Canada2DCode\Canada2DCode\bin\System.Web.Http.WebHost.xml
+C:\zuse\Jobs2018\Canada2DCode\Canada2DCode\bin\System.Web.Mvc.xml
+C:\zuse\Jobs2018\Canada2DCode\Canada2DCode\bin\System.Web.Optimization.xml
+C:\zuse\Jobs2018\Canada2DCode\Canada2DCode\bin\System.Web.Providers.xml
+C:\zuse\Jobs2018\Canada2DCode\Canada2DCode\bin\System.Web.Razor.xml
+C:\zuse\Jobs2018\Canada2DCode\Canada2DCode\bin\System.Web.WebPages.xml
+C:\zuse\Jobs2018\Canada2DCode\Canada2DCode\bin\System.Web.WebPages.Deployment.xml
+C:\zuse\Jobs2018\Canada2DCode\Canada2DCode\bin\System.Web.WebPages.Razor.xml
+C:\zuse\Jobs2018\Canada2DCode\Canada2DCode\bin\zxing.pdb
+C:\zuse\Jobs2018\Canada2DCode\Canada2DCode\bin\zxing.xml
+C:\zuse\Jobs2018\Canada2DCode\Canada2DCode\bin\zxing.presentation.pdb
+C:\zuse\Jobs2018\Canada2DCode\Canada2DCode\bin\zxing.presentation.xml
+C:\zuse\Jobs2018\Canada2DCode\Canada2DCode\obj\Debug\Canada2DCode.csproj.CoreCompileInputs.cache
+C:\zuse\Jobs2018\Canada2DCode\Canada2DCode\obj\Debug\Canada2DCode.csproj.CopyComplete
+C:\zuse\Jobs2018\Canada2DCode\Canada2DCode\obj\Debug\Canada2DCode.dll
+C:\zuse\Jobs2018\Canada2DCode\Canada2DCode\obj\Debug\Canada2DCode.pdb
+C:\zuse\2DCodeApps\Canada2DCode\bin\Canada2DCode.dll.config
+C:\zuse\2DCodeApps\Canada2DCode\bin\Canada2DCode.dll
+C:\zuse\2DCodeApps\Canada2DCode\bin\Canada2DCode.pdb
+C:\zuse\2DCodeApps\Canada2DCode\bin\Antlr3.Runtime.dll
+C:\zuse\2DCodeApps\Canada2DCode\bin\EntityFramework.dll
+C:\zuse\2DCodeApps\Canada2DCode\bin\EntityFramework.SqlServer.dll
+C:\zuse\2DCodeApps\Canada2DCode\bin\Microsoft.AspNet.Identity.Core.dll
+C:\zuse\2DCodeApps\Canada2DCode\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\zuse\2DCodeApps\Canada2DCode\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\zuse\2DCodeApps\Canada2DCode\bin\Microsoft.Owin.Cors.dll
+C:\zuse\2DCodeApps\Canada2DCode\bin\Microsoft.Owin.dll
+C:\zuse\2DCodeApps\Canada2DCode\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\zuse\2DCodeApps\Canada2DCode\bin\Microsoft.Owin.Security.Cookies.dll
+C:\zuse\2DCodeApps\Canada2DCode\bin\Microsoft.Owin.Security.dll
+C:\zuse\2DCodeApps\Canada2DCode\bin\Microsoft.Owin.Security.OAuth.dll
+C:\zuse\2DCodeApps\Canada2DCode\bin\Microsoft.Web.Infrastructure.dll
+C:\zuse\2DCodeApps\Canada2DCode\bin\Newtonsoft.Json.dll
+C:\zuse\2DCodeApps\Canada2DCode\bin\Owin.dll
+C:\zuse\2DCodeApps\Canada2DCode\bin\System.Net.Http.Formatting.dll
+C:\zuse\2DCodeApps\Canada2DCode\bin\System.Web.Cors.dll
+C:\zuse\2DCodeApps\Canada2DCode\bin\System.Web.Helpers.dll
+C:\zuse\2DCodeApps\Canada2DCode\bin\System.Web.Http.Cors.dll
+C:\zuse\2DCodeApps\Canada2DCode\bin\System.Web.Http.dll
+C:\zuse\2DCodeApps\Canada2DCode\bin\System.Web.Http.Owin.dll
+C:\zuse\2DCodeApps\Canada2DCode\bin\System.Web.Http.WebHost.dll
+C:\zuse\2DCodeApps\Canada2DCode\bin\System.Web.Mvc.dll
+C:\zuse\2DCodeApps\Canada2DCode\bin\System.Web.Optimization.dll
+C:\zuse\2DCodeApps\Canada2DCode\bin\System.Web.Providers.dll
+C:\zuse\2DCodeApps\Canada2DCode\bin\System.Web.Razor.dll
+C:\zuse\2DCodeApps\Canada2DCode\bin\System.Web.WebPages.Deployment.dll
+C:\zuse\2DCodeApps\Canada2DCode\bin\System.Web.WebPages.dll
+C:\zuse\2DCodeApps\Canada2DCode\bin\System.Web.WebPages.Razor.dll
+C:\zuse\2DCodeApps\Canada2DCode\bin\WebGrease.dll
+C:\zuse\2DCodeApps\Canada2DCode\bin\zxing.dll
+C:\zuse\2DCodeApps\Canada2DCode\bin\ZXing.Net.Mobile.Forms.dll
+C:\zuse\2DCodeApps\Canada2DCode\bin\zxing.presentation.dll
+C:\zuse\2DCodeApps\Canada2DCode\bin\Antlr3.Runtime.pdb
+C:\zuse\2DCodeApps\Canada2DCode\bin\EntityFramework.xml
+C:\zuse\2DCodeApps\Canada2DCode\bin\EntityFramework.SqlServer.xml
+C:\zuse\2DCodeApps\Canada2DCode\bin\Microsoft.AspNet.Identity.Core.xml
+C:\zuse\2DCodeApps\Canada2DCode\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\zuse\2DCodeApps\Canada2DCode\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\zuse\2DCodeApps\Canada2DCode\bin\Microsoft.Owin.xml
+C:\zuse\2DCodeApps\Canada2DCode\bin\Microsoft.Owin.Cors.xml
+C:\zuse\2DCodeApps\Canada2DCode\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\zuse\2DCodeApps\Canada2DCode\bin\Microsoft.Owin.Security.xml
+C:\zuse\2DCodeApps\Canada2DCode\bin\Microsoft.Owin.Security.Cookies.xml
+C:\zuse\2DCodeApps\Canada2DCode\bin\Microsoft.Owin.Security.OAuth.xml
+C:\zuse\2DCodeApps\Canada2DCode\bin\Newtonsoft.Json.xml
+C:\zuse\2DCodeApps\Canada2DCode\bin\System.Net.Http.Formatting.xml
+C:\zuse\2DCodeApps\Canada2DCode\bin\System.Web.Helpers.xml
+C:\zuse\2DCodeApps\Canada2DCode\bin\System.Web.Http.xml
+C:\zuse\2DCodeApps\Canada2DCode\bin\System.Web.Http.Cors.xml
+C:\zuse\2DCodeApps\Canada2DCode\bin\System.Web.Http.Owin.xml
+C:\zuse\2DCodeApps\Canada2DCode\bin\System.Web.Http.WebHost.xml
+C:\zuse\2DCodeApps\Canada2DCode\bin\System.Web.Mvc.xml
+C:\zuse\2DCodeApps\Canada2DCode\bin\System.Web.Optimization.xml
+C:\zuse\2DCodeApps\Canada2DCode\bin\System.Web.Providers.xml
+C:\zuse\2DCodeApps\Canada2DCode\bin\System.Web.Razor.xml
+C:\zuse\2DCodeApps\Canada2DCode\bin\System.Web.WebPages.xml
+C:\zuse\2DCodeApps\Canada2DCode\bin\System.Web.WebPages.Deployment.xml
+C:\zuse\2DCodeApps\Canada2DCode\bin\System.Web.WebPages.Razor.xml
+C:\zuse\2DCodeApps\Canada2DCode\bin\zxing.pdb
+C:\zuse\2DCodeApps\Canada2DCode\bin\zxing.xml
+C:\zuse\2DCodeApps\Canada2DCode\bin\zxing.presentation.pdb
+C:\zuse\2DCodeApps\Canada2DCode\bin\zxing.presentation.xml
+C:\zuse\2DCodeApps\Canada2DCode\obj\Debug\Canada2DCode.csproj.CoreCompileInputs.cache
+C:\zuse\2DCodeApps\Canada2DCode\obj\Debug\Canada2DCode.csproj.CopyComplete
+C:\zuse\2DCodeApps\Canada2DCode\obj\Debug\Canada2DCode.dll
+C:\zuse\2DCodeApps\Canada2DCode\obj\Debug\Canada2DCode.pdb
+C:\Users\huabi\Documents\1 2D\Canada2DCode_505\Canada2DCode\bin\Canada2DCode.dll.config
+C:\Users\huabi\Documents\1 2D\Canada2DCode_505\Canada2DCode\bin\Canada2DCode.dll
+C:\Users\huabi\Documents\1 2D\Canada2DCode_505\Canada2DCode\bin\Canada2DCode.pdb
+C:\Users\huabi\Documents\1 2D\Canada2DCode_505\Canada2DCode\bin\Antlr3.Runtime.dll
+C:\Users\huabi\Documents\1 2D\Canada2DCode_505\Canada2DCode\bin\EntityFramework.dll
+C:\Users\huabi\Documents\1 2D\Canada2DCode_505\Canada2DCode\bin\EntityFramework.SqlServer.dll
+C:\Users\huabi\Documents\1 2D\Canada2DCode_505\Canada2DCode\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\huabi\Documents\1 2D\Canada2DCode_505\Canada2DCode\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\huabi\Documents\1 2D\Canada2DCode_505\Canada2DCode\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\huabi\Documents\1 2D\Canada2DCode_505\Canada2DCode\bin\Microsoft.Owin.Cors.dll
+C:\Users\huabi\Documents\1 2D\Canada2DCode_505\Canada2DCode\bin\Microsoft.Owin.dll
+C:\Users\huabi\Documents\1 2D\Canada2DCode_505\Canada2DCode\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\huabi\Documents\1 2D\Canada2DCode_505\Canada2DCode\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\huabi\Documents\1 2D\Canada2DCode_505\Canada2DCode\bin\Microsoft.Owin.Security.dll
+C:\Users\huabi\Documents\1 2D\Canada2DCode_505\Canada2DCode\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\huabi\Documents\1 2D\Canada2DCode_505\Canada2DCode\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\huabi\Documents\1 2D\Canada2DCode_505\Canada2DCode\bin\Newtonsoft.Json.dll
+C:\Users\huabi\Documents\1 2D\Canada2DCode_505\Canada2DCode\bin\Owin.dll
+C:\Users\huabi\Documents\1 2D\Canada2DCode_505\Canada2DCode\bin\System.Net.Http.Formatting.dll
+C:\Users\huabi\Documents\1 2D\Canada2DCode_505\Canada2DCode\bin\System.Web.Cors.dll
+C:\Users\huabi\Documents\1 2D\Canada2DCode_505\Canada2DCode\bin\System.Web.Helpers.dll
+C:\Users\huabi\Documents\1 2D\Canada2DCode_505\Canada2DCode\bin\System.Web.Http.Cors.dll
+C:\Users\huabi\Documents\1 2D\Canada2DCode_505\Canada2DCode\bin\System.Web.Http.dll
+C:\Users\huabi\Documents\1 2D\Canada2DCode_505\Canada2DCode\bin\System.Web.Http.Owin.dll
+C:\Users\huabi\Documents\1 2D\Canada2DCode_505\Canada2DCode\bin\System.Web.Http.WebHost.dll
+C:\Users\huabi\Documents\1 2D\Canada2DCode_505\Canada2DCode\bin\System.Web.Mvc.dll
+C:\Users\huabi\Documents\1 2D\Canada2DCode_505\Canada2DCode\bin\System.Web.Optimization.dll
+C:\Users\huabi\Documents\1 2D\Canada2DCode_505\Canada2DCode\bin\System.Web.Providers.dll
+C:\Users\huabi\Documents\1 2D\Canada2DCode_505\Canada2DCode\bin\System.Web.Razor.dll
+C:\Users\huabi\Documents\1 2D\Canada2DCode_505\Canada2DCode\bin\System.Web.WebPages.Deployment.dll
+C:\Users\huabi\Documents\1 2D\Canada2DCode_505\Canada2DCode\bin\System.Web.WebPages.dll
+C:\Users\huabi\Documents\1 2D\Canada2DCode_505\Canada2DCode\bin\System.Web.WebPages.Razor.dll
+C:\Users\huabi\Documents\1 2D\Canada2DCode_505\Canada2DCode\bin\WebGrease.dll
+C:\Users\huabi\Documents\1 2D\Canada2DCode_505\Canada2DCode\bin\zxing.dll
+C:\Users\huabi\Documents\1 2D\Canada2DCode_505\Canada2DCode\bin\ZXing.Net.Mobile.Forms.dll
+C:\Users\huabi\Documents\1 2D\Canada2DCode_505\Canada2DCode\bin\zxing.presentation.dll
+C:\Users\huabi\Documents\1 2D\Canada2DCode_505\Canada2DCode\bin\Antlr3.Runtime.pdb
+C:\Users\huabi\Documents\1 2D\Canada2DCode_505\Canada2DCode\bin\EntityFramework.xml
+C:\Users\huabi\Documents\1 2D\Canada2DCode_505\Canada2DCode\bin\EntityFramework.SqlServer.xml
+C:\Users\huabi\Documents\1 2D\Canada2DCode_505\Canada2DCode\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\huabi\Documents\1 2D\Canada2DCode_505\Canada2DCode\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\huabi\Documents\1 2D\Canada2DCode_505\Canada2DCode\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\huabi\Documents\1 2D\Canada2DCode_505\Canada2DCode\bin\Microsoft.Owin.xml
+C:\Users\huabi\Documents\1 2D\Canada2DCode_505\Canada2DCode\bin\Microsoft.Owin.Cors.xml
+C:\Users\huabi\Documents\1 2D\Canada2DCode_505\Canada2DCode\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\huabi\Documents\1 2D\Canada2DCode_505\Canada2DCode\bin\Microsoft.Owin.Security.xml
+C:\Users\huabi\Documents\1 2D\Canada2DCode_505\Canada2DCode\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\huabi\Documents\1 2D\Canada2DCode_505\Canada2DCode\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\huabi\Documents\1 2D\Canada2DCode_505\Canada2DCode\bin\Newtonsoft.Json.xml
+C:\Users\huabi\Documents\1 2D\Canada2DCode_505\Canada2DCode\bin\System.Net.Http.Formatting.xml
+C:\Users\huabi\Documents\1 2D\Canada2DCode_505\Canada2DCode\bin\System.Web.Helpers.xml
+C:\Users\huabi\Documents\1 2D\Canada2DCode_505\Canada2DCode\bin\System.Web.Http.xml
+C:\Users\huabi\Documents\1 2D\Canada2DCode_505\Canada2DCode\bin\System.Web.Http.Cors.xml
+C:\Users\huabi\Documents\1 2D\Canada2DCode_505\Canada2DCode\bin\System.Web.Http.Owin.xml
+C:\Users\huabi\Documents\1 2D\Canada2DCode_505\Canada2DCode\bin\System.Web.Http.WebHost.xml
+C:\Users\huabi\Documents\1 2D\Canada2DCode_505\Canada2DCode\bin\System.Web.Mvc.xml
+C:\Users\huabi\Documents\1 2D\Canada2DCode_505\Canada2DCode\bin\System.Web.Optimization.xml
+C:\Users\huabi\Documents\1 2D\Canada2DCode_505\Canada2DCode\bin\System.Web.Providers.xml
+C:\Users\huabi\Documents\1 2D\Canada2DCode_505\Canada2DCode\bin\System.Web.Razor.xml
+C:\Users\huabi\Documents\1 2D\Canada2DCode_505\Canada2DCode\bin\System.Web.WebPages.xml
+C:\Users\huabi\Documents\1 2D\Canada2DCode_505\Canada2DCode\bin\System.Web.WebPages.Deployment.xml
+C:\Users\huabi\Documents\1 2D\Canada2DCode_505\Canada2DCode\bin\System.Web.WebPages.Razor.xml
+C:\Users\huabi\Documents\1 2D\Canada2DCode_505\Canada2DCode\bin\zxing.pdb
+C:\Users\huabi\Documents\1 2D\Canada2DCode_505\Canada2DCode\bin\zxing.xml
+C:\Users\huabi\Documents\1 2D\Canada2DCode_505\Canada2DCode\bin\zxing.presentation.pdb
+C:\Users\huabi\Documents\1 2D\Canada2DCode_505\Canada2DCode\bin\zxing.presentation.xml
+C:\Users\huabi\Documents\1 2D\Canada2DCode_505\Canada2DCode\obj\Debug\Canada2DCode.csprojAssemblyReference.cache
+C:\Users\huabi\Documents\1 2D\Canada2DCode_505\Canada2DCode\obj\Debug\Canada2DCode.csproj.CoreCompileInputs.cache
+C:\Users\huabi\Documents\1 2D\Canada2DCode_505\Canada2DCode\obj\Debug\Canada2DCode.csproj.CopyComplete
+C:\Users\huabi\Documents\1 2D\Canada2DCode_505\Canada2DCode\obj\Debug\Canada2DCode.dll
+C:\Users\huabi\Documents\1 2D\Canada2DCode_505\Canada2DCode\obj\Debug\Canada2DCode.pdb
